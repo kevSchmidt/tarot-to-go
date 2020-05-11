@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// MEDIA QUERIES
+// ORDER: Base + typography > general layout + grid > page layout > components
+
+@mixin respond($breakpoint) {
+  // Moto 4 / Galaxy S5
+  @if $breakpoint == phone-xs {
+    @media (max-width: 360px) {
+      @content;
+    }
+  }
+  // IPhone 6 / 7 / 8 / X
+  @if $breakpoint == phone-s {
+    @media (min-width: 375px) {
+      @content;
+    }
+  }
+  // Pixel 2 / XL
+  @if $breakpoint == phone-m {
+    @media (min-width: 411px) {
+      @content;
+    }
+  }
+  // IPhone 6+ / 7+ / 8+
+  @if $breakpoint == phone-l {
+    @media (min-width: 414px) {
+      @content;
+    }
+  }
+
+  // IPad
+  @if $breakpoint == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  // IPad Pro
+  @if $breakpoint == tablet-xl {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  // Laptop
+  @if $breakpoint == laptop {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+  // Laptop L
+  @if $breakpoint == laptop-l {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+  // Laptop 4K
+  @if $breakpoint == laptop-4k {
+    @media (min-width: 2560px) {
+      @content;
+    }
+  }
+}
