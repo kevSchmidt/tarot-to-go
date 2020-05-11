@@ -5,9 +5,13 @@ const cardDescription = document.querySelector("#cardDescription");
 
 // create card selection
 parsedData.forEach((obj) => {
-  let { id, number } = obj;
+  let { id, backCard } = obj;
   let list = document.querySelector("#cardList");
-  let cardList = `<li id = ${id}> ${number} </li>`;
+  let cardList = `
+  <li id = ${id}> 
+   <img src = "${backCard}" class = "back-card"></img> 
+  </li>
+  `;
   list.innerHTML += cardList;
 });
 
