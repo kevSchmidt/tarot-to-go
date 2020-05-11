@@ -1,4 +1,4 @@
-# Gabrieal Kevin & Romain
+# Gabriela Kevin & Romain
 
 ## pull master branch:
 - -> pull request 
