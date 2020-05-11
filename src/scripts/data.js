@@ -1,4 +1,4 @@
-[
+let tarCards = [
   {
     id: 0,
     name: "The Fool",
