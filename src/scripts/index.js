@@ -1,42 +1,26 @@
 import { data } from "./data.js";
 let parsedData = JSON.parse(data);
+// console.log(parsedData);
 
-const cardImage = document.querySelector("#cardImage");
-const cardTitle = document.querySelector("#cardTitle");
-const cardDescription = document.querySelector("#cardDescription");
-
-/* ******
-// LIST CARDS
-const nums = new Set();
-while (nums.size !== 22) {
-  nums.add(Math.floor(Math.random() * 22) + 1);
+// SHUFFLE FUNCTION
+function shuffleDeck(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
 }
-let cardsRandom = [];
-nums.forEach((element) => {
-  cardsRandom.push(element);
-});
-console.log(cardsRandom, "this is cardsRandom");
-***** */
+shuffleDeck(parsedData);
+
+const cardImage = document.querySelector("#cardImage"); // red border
+const cardTitle = document.querySelector("#cardTitle"); // yellow border
+const cardDescription = document.querySelector("#cardDescription"); // blue border
 
 // CREATE CARDS SELECTION
-let alreadyUsed = [];
-let result = Math.floor(Math.random() * 22) + 1;
-function myFunction() {
-  alreadyUsed.push(result);
-  if (!alreadyUsed.includes(result)) {
-    return parseInt(result, 10);
-    // return result;
-  }
-  console.log(alreadyUsed);
-  console.log(parseInt(result, 10));
-}
-
 parsedData.forEach((obj) => {
   let { id, backCard } = obj;
   let list = document.querySelector("#cardList");
-
   let cardList = `
-  <li id = ${result} class= "cardSelection">
+  <li id = ${id} class= "cardSelection">
    <img src = "${backCard}" class = "back-card"></img>
   </li>
   `;
@@ -66,9 +50,10 @@ function display() {
   newDescription.innerHTML = `${text}`;
   cardDescription.appendChild(newDescription);
 }
-const listItems = document.querySelectorAll("#cardList li");
 
 // ACTIVE ITEMS
+const listItems = document.querySelectorAll("#cardList li");
+
 function onClick() {
   listItems.forEach((card) => {
     this.classList.remove("hover");
@@ -89,8 +74,6 @@ listItems.forEach((item) => {
   item.addEventListener("click", display);
 });
 
-document.getElementById("cardButton").addEventListener("click", myFunction);
-
 /* ******************************************************
  // Remove item
  let span = document.createElement("span");
@@ -105,39 +88,4 @@ document.getElementById("cardButton").addEventListener("click", myFunction);
  span.addEventListener("click", () => {
    newItem.remove();
  });
- ********* */
-
-/* ******************************************************
-// Random cards
-
-const nums = new Set();
-while (nums.size !== 23) {
-  nums.add(Math.floor(Math.random() * 23) + 1);
-}
-
-let cardsRandom = [];
-nums.forEach((element) => {
-  cardsRandom.push(element.toString());
-});
-
-console.log(cardsRandom, "Random numbers pushed");
-
-// Display function
-
-let cardList;
-let displayCards = document.querySelector("#cardList");
-
-let display2 = () => {
-  for (let i = 0; i < 21; i++) {
-    let valuePro = cardsRandom[i];
-
-    let { id, photo } = parsedData[valuePro];
-    cardList = `<div class="card"><img src=${photo}></div>`;
-
-    displayCards.innerHTML += card;
-  }
-  nums = [];
-  cardsRandom = [];
-};
-display2();
-*********************/
+ ****************************************** */

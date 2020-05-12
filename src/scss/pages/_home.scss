@@ -41,7 +41,6 @@ h1 {
 
 #cardDescription {
   padding: 1rem 10vw;
-  display: flex;
   border: 2px dotted blue;
 }
 
@@ -71,19 +70,4 @@ h1 {
 .hover {
   transform: translateY(-5px);
   box-shadow: 4px 8px 6px black;
-}
-
-.card {
-  margin: 0;
-}
-
-.card img {
-  width: auto;
-  height: 220px;
-  margin: 5px;
-}
-
-#cardButton {
-  width: 15rem;
-  height: 5rem;
 }
