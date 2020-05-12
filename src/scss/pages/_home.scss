@@ -1,35 +1,91 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.displayCards {
-    width: 95%;
-    height: 70%;
-    border: 1px rgba(0, 0, 0, 0.056) solid;
-    padding: 10px 5px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+h1 {
+  margin: 2rem;
+}
+
+// Card selection
+#cardList {
+  height: 4rem;
+  display: flex;
+  list-style: none;
+}
+
+#cardImg {
+  height: 10rem;
+}
+
+.cardSelection {
+  margin: 0.3rem;
+}
+.back-card {
+  width: 2.5rem;
+}
+
+// Element container
+#cardImage {
+  margin-top: 2rem;
+  padding: 1rem 10vw;
+  border: 2px dotted red;
+}
+
+#cardTitle {
+  padding: 1rem 10vw;
+  display: flex;
+  border: 2px dotted yellow;
+}
+
+#cardDescription {
+  padding: 1rem 10vw;
+  display: flex;
+  border: 2px dotted blue;
+}
+
+// Add element
+.imageAdd {
+  height: 10rem;
+  margin: 0 2rem;
+}
+
+.divAdd {
+  border-top: 1px solid black;
+}
+
+.titleAdd {
+  margin: 0 2.5rem;
+}
+
+.descriptionAdd {
+  margin: 0 2.5rem;
+}
+
+// HOVER, ACTIVE etc..
+.active {
+  transform: scale(1.2);
+}
+
+.hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 8px 6px black;
 }
 
 .card {
-    margin: 0;
+  margin: 0;
 }
 
-.card img{
-    width: auto;
-    height: 150px;
-    margin: 5px;
+.card img {
+  width: auto;
+  height: 220px;
+  margin: 5px;
 }
 
-button {
-    width: 80px;
-    height: 40px;
-
+#cardButton {
+  width: 15rem;
+  height: 5rem;
 }
+
