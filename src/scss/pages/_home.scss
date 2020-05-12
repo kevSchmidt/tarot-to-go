@@ -1,0 +1,35 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayCards {
+    width: 95%;
+    height: 70%;
+    border: 1px rgba(0, 0, 0, 0.056) solid;
+    padding: 10px 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 0;
+}
+
+.card img{
+    width: auto;
+    height: 150px;
+    margin: 5px;
+}
+
+button {
+    width: 80px;
+    height: 40px;
+
+}
