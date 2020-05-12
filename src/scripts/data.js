@@ -1,3 +1,4 @@
+
 let tarCards = [
   {
     id: 0,
@@ -180,3 +181,4 @@ let tarCards = [
 
 let data = JSON.stringify(tarCards);
 export { data };
+
