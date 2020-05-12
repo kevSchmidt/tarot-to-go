@@ -1,5 +1,7 @@
+
 import { data } from "./data.js";
 let parsedData = JSON.parse(data);
+
 
 const cardImage = document.querySelector("#cardImage");
 const cardTitle = document.querySelector("#cardTitle");
@@ -141,3 +143,4 @@ let display2 = () => {
 };
 display2();
 *********************/
+
