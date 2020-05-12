@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+h1 {
+  margin: 2rem;
+}
+
+// Card selection
 #cardList {
   height: 4rem;
   display: flex;
@@ -14,31 +19,55 @@
   height: 10rem;
 }
 
+.cardSelection {
+  margin: 0.3rem;
+}
 .back-card {
-  margin: 0.1rem;
   width: 2.5rem;
 }
 
+// Element container
 #cardImage {
+  margin-top: 2rem;
   padding: 1rem 10vw;
   border: 2px dotted red;
 }
 
 #cardTitle {
   padding: 1rem 10vw;
+  display: flex;
   border: 2px dotted yellow;
 }
 
 #cardDescription {
   padding: 1rem 10vw;
+  display: flex;
   border: 2px dotted blue;
 }
 
-// ===== TEST ===
+// Add element
 .imageAdd {
   height: 10rem;
+  margin: 0 2rem;
 }
 
 .divAdd {
-  border: 1px solid red;
+  border-top: 1px solid black;
+}
+
+.titleAdd {
+  margin: 0 2.5rem;
+}
+
+.descriptionAdd {
+  margin: 0 2.5rem;
+}
+
+// HOVER, ACTIVE etc..
+.active {
+  transform: scale(1.2);
+}
+
+.hover {
+  transform: translateY(-5px);
 }

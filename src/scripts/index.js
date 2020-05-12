@@ -5,61 +5,58 @@ const cardImage = document.querySelector("#cardImage");
 const cardTitle = document.querySelector("#cardTitle");
 const cardDescription = document.querySelector("#cardDescription");
 
-// create card selection
+// RANDOM NUMBERS
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+// CREATE CARDS SELECTION
 parsedData.forEach((obj) => {
   let { id, backCard } = obj;
   let list = document.querySelector("#cardList");
   let cardList = `
-  <li id = ${id}> 
+  <li id = ${id} class= "cardSelection"> 
    <img src = "${backCard}" class = "back-card"></img> 
   </li>
   `;
   list.innerHTML += cardList;
 });
 
-/*
-// display image
-function displayImg() {
-  let card = parsedData.find((card) => card.id == this.id);
-  let { name, photo } = card;
-  cardImage.innerHTML = `<img id = "cardImg" src="${photo}" alt=${name} />`;
-}
-// display title
-function displayTitle() {
-  let card = parsedData.find((card) => card.id == this.id);
-  let { name } = card;
-  cardTitle.innerHTML = `<h2 id = "cardHeader">${name}</h2>`;
-}
-// display card info
-function displayInfo() {
-  let card = parsedData.find((card) => card.id == this.id);
-  let { text } = card;
-  cardDescription.innerHTML = `<p id = "cardInfo">${text}</p>`;
-}
-*/
-
+// DISPLAY CARDS
 function display() {
   let card = parsedData.find((card) => card.id == this.id);
   let { name, photo, text } = card;
-  cardImage.innerHTML = `<img id = "cardImg" src="${photo}" alt=${name} />`;
-  cardTitle.innerHTML = `<h2 id = "cardHeader">${name}</h2>`;
-  cardDescription.innerHTML = `<p id = "cardInfo">${text}</p>`;
+
+  // Add image
+  let newImg = document.createElement("img");
+  newImg.src = `./img/major${getRandomInt(2)}${getRandomInt(10)}.jpg`;
+  newImg.className = "imageAdd";
+  cardImage.appendChild(newImg);
+
+  // Add title
+  let newTitle = document.createElement("div");
+  newTitle.className = "titleAdd";
+  newTitle.innerHTML = `${name}`;
+  cardTitle.appendChild(newTitle);
+
+  // Add text
+  let newDescription = document.createElement("div");
+  newDescription.className = "descriptionAdd";
+  newDescription.innerHTML = `${text}`;
+  cardDescription.appendChild(newDescription);
 }
 
 const listItems = document.querySelectorAll("#cardList li");
 
-// active item
+// ACTIVE ITEMS
 function onClick() {
   listItems.forEach((card) => {
-    if (card.classList.contains("active")) {
-      card.classList.remove("active");
-    }
     this.classList.remove("hover");
     this.classList.add("active");
   });
 }
 
-// event listener
+// EVENT LISTENER
 listItems.forEach((item) => {
   item.addEventListener("mouseover", () => {
     item.classList.add("hover");
@@ -68,45 +65,22 @@ listItems.forEach((item) => {
     item.classList.remove("hover");
   });
   item.addEventListener("click", onClick);
+
   item.addEventListener("click", display);
-  /*
-  item.addEventListener("click", displayImg);
-  item.addEventListener("click", displayTitle);
-  item.addEventListener("click", displayInfo);
-  */
 });
 
-// ========== TEST ====
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
+/*
+ // Remove item
+ let span = document.createElement("span");
+ let text = document.createElement("i");
+ text.className = "fas fa-times-circle";
+ span.className = "close";
+ span.appendChild(text);
+ list.forEach((item) => {
+   item.appendChild(span);
+ });
 
-const add = () => {
-  // Add item
-  let newItem = document.createElement("div");
-  newItem.className = "divAdd";
-  let newImg = document.createElement("img");
-  newImg.src = `./img/major${getRandomInt(2)}${getRandomInt(10)}.jpg`;
-  newImg.className = "imageAdd";
-  newItem.appendChild(newImg);
-  document.querySelector(".list-item").appendChild(newItem);
-
-  let list = document.querySelectorAll(".divAdd");
-
-  // Remove item
-  let span = document.createElement("span");
-  let text = document.createElement("i");
-  text.className = "fas fa-times-circle";
-  span.className = "close";
-  span.appendChild(text);
-  list.forEach((item) => {
-    item.appendChild(span);
-  });
-  span.addEventListener("click", () => {
-    newItem.remove();
-  });
-};
-// event listener
-listItems.forEach((item) => {
-  item.addEventListener("click", add);
-});
+ span.addEventListener("click", () => {
+   newItem.remove();
+ });
+ */
