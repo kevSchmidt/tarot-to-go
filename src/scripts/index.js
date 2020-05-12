@@ -5,11 +5,6 @@ const cardImage = document.querySelector("#cardImage");
 const cardTitle = document.querySelector("#cardTitle");
 const cardDescription = document.querySelector("#cardDescription");
 
-// RANDOM NUMBERS
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-
 // CREATE CARDS SELECTION
 parsedData.forEach((obj) => {
   let { id, backCard } = obj;
@@ -29,7 +24,7 @@ function display() {
 
   // Add image
   let newImg = document.createElement("img");
-  newImg.src = `./img/major${getRandomInt(2)}${getRandomInt(10)}.jpg`;
+  newImg.src = `${photo}`;
   newImg.className = "imageAdd";
   cardImage.appendChild(newImg);
 
