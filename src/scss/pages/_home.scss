@@ -10,7 +10,35 @@
   list-style: none;
 }
 
+#cardImg {
+  height: 10rem;
+}
+
 .back-card {
   margin: 0.1rem;
   width: 2.5rem;
+}
+
+#cardImage {
+  padding: 1rem 10vw;
+  border: 2px dotted red;
+}
+
+#cardTitle {
+  padding: 1rem 10vw;
+  border: 2px dotted yellow;
+}
+
+#cardDescription {
+  padding: 1rem 10vw;
+  border: 2px dotted blue;
+}
+
+// ===== TEST ===
+.imageAdd {
+  height: 10rem;
+}
+
+.divAdd {
+  border: 1px solid red;
 }
