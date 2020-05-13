@@ -84,7 +84,6 @@ listItems.forEach((item) => {
  list.forEach((item) => {
    item.appendChild(span);
  });
-
  span.addEventListener("click", () => {
    newItem.remove();
  });
