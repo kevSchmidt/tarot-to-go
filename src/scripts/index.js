@@ -11,6 +11,7 @@ function shuffle(arr) {
 }
 shuffle(parsedData);
 
+// SECTIONS
 const cardImage = document.querySelector("#cardImage"); // red border
 const cardTitle = document.querySelector("#cardTitle"); // yellow border
 const cardDescription = document.querySelector("#cardDescription"); // blue border
@@ -28,32 +29,48 @@ parsedData.forEach((obj) => {
 });
 
 // DISPLAY CARDS
+let counter = 0;
+let titleText = "";
+let interText = "";
+
 function display() {
+  counter++; // each click adds a integer value to the counter variable
   let card = parsedData.find((cards) => cards.id == this.id);
-  let { name, photo, text } = card;
+  let { photo, name, text } = card;
 
-  // Add image
-  let newImg = document.createElement("img");
-  newImg.src = `${photo}`;
-  newImg.className = "imageAdd";
-  cardImage.appendChild(newImg);
+  if (counter < 4) {
+    // Add image
+    let newImg = document.createElement("img");
+    newImg.src = `${photo}`; // assign value to the variable coming from data.js
+    newImg.className = "imageAdd"; // assign class
+    cardImage.appendChild(newImg); // send newImg to the div "cardImage"
+    console.log(counter); // test purpose
+    console.log(newImg); // test purpose
+    // Add title
+    titleText += `${name} - `; // send values to the empty string titleText
+    console.log(name); // test purpose
+    // Add text
+    interText += `${text} `; // send values to the empty string interText
+    console.log(text); // test purpose
+  } else {
+    console.log("it has been more than 3 choices"); // test purpose
+  }
 
-  // Add title
-  let newTitle = document.createElement("div");
-  newTitle.className = "titleAdd";
-  newTitle.innerHTML = `${name}`;
-  cardTitle.appendChild(newTitle);
-
-  // Add text
-  let newDescription = document.createElement("div");
-  newDescription.className = "descriptionAdd";
-  newDescription.innerHTML = `${text}`;
-  cardDescription.appendChild(newDescription);
+  if (counter === 3) {
+    titleText += `.`; // still to be fixed, replacing the dash with a dot
+    interText += `.`; // still to be fixed, replacing the dash with a dot
+    console.log("puh"); // test purpose
+    setTimeout(function () {
+      let textNode = document.createTextNode(titleText);
+      let textNode2 = document.createTextNode(interText);
+      cardTitle.appendChild(textNode);
+      cardDescription.appendChild(textNode2);
+    }, 3000);
+  }
 }
 
 // ACTIVE ITEMS
 const listItems = document.querySelectorAll("#cardList li");
-
 function onClick() {
   listItems.forEach((card) => {
     this.classList.remove("hover");
@@ -70,7 +87,6 @@ listItems.forEach((item) => {
     item.classList.remove("hover");
   });
   item.addEventListener("click", onClick);
-
   item.addEventListener("click", display);
 });
 
@@ -87,4 +103,29 @@ listItems.forEach((item) => {
  span.addEventListener("click", () => {
    newItem.remove();
  });
- ****************************************** */
+ ****************************************** 
+//removed
+
+    // Add title
+    // let newTitle = document.createElement("div");
+    // newTitle.className = "titleAdd";
+    // newTitle.innerHTML = `${name}`;
+
+    // Add text
+    // let newDescription = document.createElement("div");
+    // newDescription.className = "descriptionAdd";
+    // newDescription.innerHTML = `${text}`;
+
+
+******************************************
+
+
+// const list = [...parsedData].reduce(
+//   (acc, a) =>
+//     acc + `<p class="cardDescription__text" id="${a.text}">${a.text}</p>`,
+//   ""
+// );
+// console.log(list);
+
+
+*/
