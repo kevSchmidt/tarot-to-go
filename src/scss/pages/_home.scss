@@ -51,6 +51,17 @@ body {
 //   }
 // } 
 
+#cardImage {
+  width: 20rem;
+  height: auto;
+}
+
+
+.imageAdd img{
+  width: 5rem;
+  height: auto;
+}
+
 #cardList line{
   display: flex;
   width: 50rem;
@@ -68,19 +79,8 @@ body {
   width: 2.5rem;
 }
 
-Element container
-#cardImage {
-  margin-top: 2rem;
-  // padding: 1rem 10vw;
-  border: 2px dotted red;
-}
 
 
-Add element
-.imageAdd {
-  height: 2rem;
-  margin: 0 2rem;
-}
 
 .divAdd {
   border-top: 1px solid black;
