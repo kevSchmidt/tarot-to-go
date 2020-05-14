@@ -38,6 +38,8 @@ function display() {
   counter++; // each click adds a integer value to the counter variable
   let card = parsedData.find((cards) => cards.id == this.id);
   let { photo, name, text } = card;
+  console.log(card);
+  console.log(this.id);
 
 
   if (counter < 4) {
@@ -57,6 +59,7 @@ function display() {
   if (counter === 3) {
     titleText += `.`; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
+
     setTimeout(function () {
       let textNode = document.createTextNode(titleText);
       let textNode2 = document.createTextNode(interText);
@@ -66,6 +69,7 @@ function display() {
   }
 
 }
+
 
 
 // ACTIVE ITEMS
@@ -79,6 +83,7 @@ function display() {
      }
    });
  }
+
 
 // EVENT LISTENER
 listItems.forEach((item) => {
