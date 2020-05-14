@@ -27,9 +27,9 @@ body {
   // border: 2px rgb(255, 255, 255) solid;
   // border-radius: 50%;
   list-style: none;
-  background-image: url("../img/table.png");
+  // background-image: url("../img/table.png");
   background-repeat: no-repeat;
-  // @include on-circle($item-count: 22, $circle-size: 50rem, $item-size: 13rem);   
+  @include on-circle($item-count: 22, $circle-size: 50rem, $item-size: 13rem);   
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(5, 1fr);
 }
@@ -39,17 +39,17 @@ body {
   height: auto;
 }
 
-li[name="card0"] img, li[name="card1"] img, li[name="card2"] img, li[name="card3"] img, li[name="card4"] img, li[name="card5"] img, li[name="card6"] img, li[name="card7"] img {
-  width: 15rem;
-  height: auto;
-} 
+// li[name="card0"] img, li[name="card1"] img, li[name="card2"] img, li[name="card3"] img, li[name="card4"] img, li[name="card5"] img, li[name="card6"] img, li[name="card7"] img {
+//   width: 15rem;
+//   height: auto;
+// } 
 
-li[name="card8"] img, li[name="card9"] img, li[name="card10"] img, li[name="card11"] img, li[name="card12"] img, li[name="card13"] img, li[name="card14"] img, li[name="card15"] img, li[name="card16"] img, li[name="card17"] img, li[name="card18"] img, li[name="card19"] img, li[name="card20"] img, li[name="card21"] img {
-  display: none;
-  &:hover,:active{
-    display: none;
-  }
-} 
+// li[name="card8"] img, li[name="card9"] img, li[name="card10"] img, li[name="card11"] img, li[name="card12"] img, li[name="card13"] img, li[name="card14"] img, li[name="card15"] img, li[name="card16"] img, li[name="card17"] img, li[name="card18"] img, li[name="card19"] img, li[name="card20"] img, li[name="card21"] img {
+//   display: none;
+//   &:hover,:active{
+//     display: none;
+//   }
+// } 
 
 #cardList line{
   display: flex;
