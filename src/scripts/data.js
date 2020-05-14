@@ -3,7 +3,7 @@ let tarCards = [
   {
     id: 0,
     name: "The Fool",
-    number: 0,
+    attribute: 0,
     text: "Fool text",
     photo: "./img/major00.jpg",
     backCard: "./img/backCard.jpg",
@@ -11,7 +11,7 @@ let tarCards = [
   {
     id: 1,
     name: "The Magician",
-    number: 1,
+    attribute: 1,
     text: "Magicien text",
     photo: "./img/major01.jpg",
     backCard: "./img/backCard.jpg",
@@ -19,7 +19,7 @@ let tarCards = [
   {
     id: 2,
     name: "The High Priestess",
-    number: 2,
+    attribute: 2,
     text: " Priestess text",
     photo: "./img/major02.jpg",
     backCard: "./img/backCard.jpg",
@@ -27,7 +27,7 @@ let tarCards = [
   {
     id: 3,
     name: "The Empress",
-    number: 3,
+    attribute: 3,
     text: "Empress text",
     photo: "./img/major03.jpg",
     backCard: "./img/backCard.jpg",
@@ -36,7 +36,7 @@ let tarCards = [
   {
     id: 4,
     name: "The Emperor",
-    number: 4,
+    attribute: 4,
     text: "Emperor text",
     photo: "./img/major04.jpg",
     backCard: "./img/backCard.jpg",
@@ -44,7 +44,7 @@ let tarCards = [
   {
     id: 5,
     name: "The Hierophant",
-    number: 5,
+    attribute: 5,
     text: "Hierophant text",
     photo: "./img/major05.jpg",
     backCard: "./img/backCard.jpg",
@@ -52,7 +52,7 @@ let tarCards = [
   {
     id: 6,
     name: "The Lovers",
-    number: 6,
+    attribute: 6,
     text: "Lovers text",
     photo: "./img/major06.jpg",
     backCard: "./img/backCard.jpg",
@@ -60,7 +60,7 @@ let tarCards = [
   {
     id: 7,
     name: "The Chariot",
-    number: 7,
+    attribute: 7,
     text: "Chariot text",
     photo: "./img/major07.jpg",
     backCard: "./img/backCard.jpg",
@@ -68,7 +68,7 @@ let tarCards = [
   {
     id: 8,
     name: "Justice",
-    number: 8,
+    attribute: 8,
     text: "Justice text",
     photo: "./img/major08.jpg",
     backCard: "./img/backCard.jpg",
@@ -76,7 +76,7 @@ let tarCards = [
   {
     id: 9,
     name: "The Hermit",
-    number: 9,
+    attribute: 9,
     text: "Hermit text",
     photo: "./img/major09.jpg",
     backCard: "./img/backCard.jpg",
@@ -84,7 +84,7 @@ let tarCards = [
   {
     id: 10,
     name: "Wheel of Fortune",
-    number: 10,
+    attribute: 10,
     text: "Fortune text",
     photo: "./img/major10.jpg",
     backCard: "./img/backCard.jpg",
@@ -92,7 +92,7 @@ let tarCards = [
   {
     id: 11,
     name: "Strength",
-    number: 11,
+    attribute: 11,
     text: "Strength text",
     photo: "./img/major11.jpg",
     backCard: "./img/backCard.jpg",
@@ -100,7 +100,7 @@ let tarCards = [
   {
     id: 12,
     name: "The Hanged Man",
-    number: 12,
+    attribute: 12,
     text: "Hanged text",
     photo: "./img/major12.jpg",
     backCard: "./img/backCard.jpg",
@@ -108,7 +108,7 @@ let tarCards = [
   {
     id: 13,
     name: "Death",
-    number: 13,
+    attribute: 13,
     text: "Death text",
     photo: "./img/major13.jpg",
     backCard: "./img/backCard.jpg",
@@ -116,7 +116,7 @@ let tarCards = [
   {
     id: 14,
     name: "Temperance",
-    number: 14,
+    attribute: 14,
     text: "Temperance text",
     photo: "./img/major14.jpg",
     backCard: "./img/backCard.jpg",
@@ -124,7 +124,7 @@ let tarCards = [
   {
     id: 15,
     name: "The Devil",
-    number: 15,
+    attribute: 15,
     text: "Devil text",
     photo: "./img/major15.jpg",
     backCard: "./img/backCard.jpg",
@@ -132,7 +132,7 @@ let tarCards = [
   {
     id: 16,
     name: "The Tower",
-    number: 16,
+    attribute: 16,
     text: "Tower text",
     photo: "./img/major16.jpg",
     backCard: "./img/backCard.jpg",
@@ -140,7 +140,7 @@ let tarCards = [
   {
     id: 17,
     name: "The Star",
-    number: 17,
+    attribute: 17,
     text: "Star text",
     photo: "./img/major17.jpg",
     backCard: "./img/backCard.jpg",
@@ -148,7 +148,7 @@ let tarCards = [
   {
     id: 18,
     name: "The Moon",
-    number: 18,
+    attribute: 18,
     text: "Moon text",
     photo: "./img/major18.jpg",
     backCard: "./img/backCard.jpg",
@@ -156,7 +156,7 @@ let tarCards = [
   {
     id: 19,
     name: "The Sun",
-    number: 19,
+    attribute: 19,
     text: "Sun text",
     photo: "./img/major19.jpg",
     backCard: "./img/backCard.jpg",
@@ -164,7 +164,7 @@ let tarCards = [
   {
     id: 20,
     name: "Judgement",
-    number: 20,
+    attribute: 20,
     text: "Judgement text",
     photo: "./img/major20.jpg",
     backCard: "./img/backCard.jpg",
@@ -172,7 +172,7 @@ let tarCards = [
   {
     id: 21,
     name: "The World",
-    number: 21,
+    attribute: 21,
     text: "World text",
     photo: "./img/major21.jpg",
     backCard: "./img/backCard.jpg",

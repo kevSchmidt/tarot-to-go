@@ -1,52 +1,84 @@
-.container {
+body {
+  background-color: #C5BFB0 ;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
 }
 
-h1 {
-  margin: 2rem;
+// Central grid
+
+.container {
+  width: 650px;
+  height: 650px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 // Card selection
 #cardList {
-  height: 4rem;
-  display: flex;
+  display: none;
+  width: 650px;
+  height: 650px;
+  // border: 2px rgb(255, 255, 255) solid;
+  // border-radius: 50%;
   list-style: none;
+  background-image: url("../img/table.png");
+  background-repeat: no-repeat;
+  // @include on-circle($item-count: 22, $circle-size: 50rem, $item-size: 13rem);   
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
+#cardList img {
+  width: 10rem;
+  height: auto;
+}
+
+li[name="card0"] img, li[name="card1"] img, li[name="card2"] img, li[name="card3"] img, li[name="card4"] img, li[name="card5"] img, li[name="card6"] img, li[name="card7"] img {
+  width: 15rem;
+  height: auto;
+} 
+
+li[name="card8"] img, li[name="card9"] img, li[name="card10"] img, li[name="card11"] img, li[name="card12"] img, li[name="card13"] img, li[name="card14"] img, li[name="card15"] img, li[name="card16"] img, li[name="card17"] img, li[name="card18"] img, li[name="card19"] img, li[name="card20"] img, li[name="card21"] img {
+  display: none;
+  &:hover,:active{
+    display: none;
+  }
+} 
+
+#cardList line{
+  display: flex;
+  width: 50rem;
+ }
+
 #cardImg {
-  height: 10rem;
+  height: 5rem;
 }
 
 .cardSelection {
+  width: 2rem;
   margin: 0.3rem;
 }
 .back-card {
   width: 2.5rem;
 }
 
-// Element container
+Element container
 #cardImage {
   margin-top: 2rem;
-  padding: 1rem 10vw;
+  // padding: 1rem 10vw;
   border: 2px dotted red;
 }
 
-#cardTitle {
-  padding: 1rem 10vw;
-  display: flex;
-  border: 2px dotted yellow;
-}
 
-#cardDescription {
-  padding: 1rem 10vw;
-  border: 2px dotted blue;
-}
-
-// Add element
+Add element
 .imageAdd {
-  height: 10rem;
+  height: 2rem;
   margin: 0 2rem;
 }
 
@@ -64,10 +96,90 @@ h1 {
 
 // HOVER, ACTIVE etc..
 .active {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .hover {
   transform: translateY(-5px);
   box-shadow: 4px 8px 6px black;
 }
+
+// Intro elements
+
+.sunCerle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.eye {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px #000000 solid;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  margin: 49.5%;
+  z-index: 3;
+  -webkit-animation: 8s linear 0s infinite alternate move_eye;
+  animation: 8s linear 0s infinite alternate move_eye;
+  -webkit-animation: 8s linear 0s infinite alternate move_eye_top;
+  animation: 8s linear 0s infinite alternate move_eye_top;
+}
+
+.sun {
+  position: relative;
+  top: 117px;
+  left: 150px;
+  width: 350px;
+  height: auto;
+  z-index: 2;
+}
+
+.circle {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  width: 550px;
+  height: auto;
+  z-index: 3;
+  -webkit-animation: circle 150s linear infinite;
+}
+
+// Intro elements animation 
+
+@-webkit-keyframes circle {
+  from{
+      -webkit-transform: rotate(0deg);
+  }
+  to{
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes move_eye { from { left:-0.2%; } to { left:0.2%; }  }
+        @keyframes move_eye { from { left:-0.4%; } to { left:0.4%; }  }
+
+@-webkit-keyframes move_eye_top { from { top:-0.4%; } to { top:0%; }  }
+        @keyframes move_eye_top { from { top:-0.4%; } to { top:0%; }  }
+
+
+
+
+
+
+#cardTitle {
+  padding: 1rem 10vw;
+  display: flex;
+  border: 2px dotted yellow;
+}
+
+#cardDescription {
+  padding: 1rem 10vw;
+  border: 2px dotted blue;
+}
+
+
+
+
+
