@@ -37,6 +37,8 @@ function display() {
   counter++; // each click adds a integer value to the counter variable
   let card = parsedData.find((cards) => cards.id == this.id);
   let { photo, name, text } = card;
+  console.log(card);
+  console.log(this.id);
 
   if (counter < 4) {
     // Add image
@@ -59,7 +61,7 @@ function display() {
   if (counter === 3) {
     titleText += `.`; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
-    console.log("puh"); // test purpose
+    console.log("it has been 3 choices"); // test purpose
     setTimeout(function () {
       let textNode = document.createTextNode(titleText);
       let textNode2 = document.createTextNode(interText);
@@ -69,12 +71,17 @@ function display() {
   }
 }
 
-// ACTIVE ITEMS
+// // ACTIVE ITEMS
 const listItems = document.querySelectorAll("#cardList li");
 function onClick() {
   listItems.forEach((card) => {
     this.classList.remove("hover");
     this.classList.add("active");
+    if (counter > 2) {
+      this.classList.remove("active");
+    }
+    if ((classList.style = "active")) {
+    }
   });
 }
 
