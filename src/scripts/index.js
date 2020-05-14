@@ -66,14 +66,16 @@ function display() {
 
 
 // ACTIVE ITEMS
-const listItems = document.querySelectorAll("li");
-
-function onClick() {
-  listItems.forEach((card) => {
-    this.classList.remove("hover");
-    this.classList.add("active");
-  });
-}
+ const listItems = document.querySelectorAll("li");
+ function onClick() {
+   listItems.forEach((card) => {
+     this.classList.remove("hover");
+     this.classList.add("active");
+     if (counter > 2) {
+       this.classList.remove("active");
+     }
+   });
+ }
 
 // EVENT LISTENER
 listItems.forEach((item) => {
@@ -149,3 +151,20 @@ sunCerle.addEventListener("click", () =>  {
  });
  ****************************************** */
 
+/* ======= Gabriela comment ========================
+ // Add title
+ let newTitle = document.createElement("div");
+ newTitle.className = "titleAdd";
+ newTitle.innerHTML = `${name}`;
+ // Add text
+ let newDescription = document.createElement("div");
+ newDescription.className = "descriptionAdd";
+ newDescription.innerHTML = `${text}`;
+ // Gabriela function
+ const list = [...parsedData].reduce(
+   (acc, a) =>
+     acc + `<p class="cardDescription__text" id="${a.text}">${a.text}</p>`,
+   ""
+ );
+ console.log(list);
+============================== */
