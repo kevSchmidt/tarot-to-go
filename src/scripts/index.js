@@ -11,6 +11,7 @@ function shuffle(arr) {
 }
 shuffle(parsedData);
 
+// SECTIONS
 const cardImage = document.querySelector("#cardImage"); // red border
 const cardTitle = document.querySelector("#cardTitle"); // yellow border
 const cardDescription = document.querySelector("#cardDescription"); // blue border
@@ -38,6 +39,7 @@ function display() {
   let card = parsedData.find((cards) => cards.id == this.id);
   let { photo, name, text } = card;
 
+
   if (counter < 4) {
     // Add image
     let newImg = document.createElement("img");
@@ -62,6 +64,7 @@ function display() {
       cardDescription.appendChild(textNode2);
     }, 3000);
   }
+
 }
 
 
@@ -86,7 +89,6 @@ listItems.forEach((item) => {
     item.classList.remove("hover");
   });
   item.addEventListener("click", onClick);
-
   item.addEventListener("click", display);
 });
 // Design 
@@ -149,7 +151,31 @@ sunCerle.addEventListener("click", () =>  {
  span.addEventListener("click", () => {
    newItem.remove();
  });
- ****************************************** */
+ ****************************************** 
+//removed
+
+    // Add title
+    // let newTitle = document.createElement("div");
+    // newTitle.className = "titleAdd";
+    // newTitle.innerHTML = `${name}`;
+
+    // Add text
+    // let newDescription = document.createElement("div");
+    // newDescription.className = "descriptionAdd";
+    // newDescription.innerHTML = `${text}`;
+
+
+******************************************
+
+
+// const list = [...parsedData].reduce(
+//   (acc, a) =>
+//     acc + `<p class="cardDescription__text" id="${a.text}">${a.text}</p>`,
+//   ""
+// );
+// console.log(list);
+
+
 
 /* ======= Gabriela comment ========================
  // Add title
@@ -168,3 +194,4 @@ sunCerle.addEventListener("click", () =>  {
  );
  console.log(list);
 ============================== */
+
