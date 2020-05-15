@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1024px" viewBox="0 0 1440 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="49.8147758%" cy="51.6183205%" fx="49.8147758%" fy="51.6183205%" r="74.5788348%" gradientTransform="translate(0.498148,0.516183),scale(0.711111,1.000000),rotate(180.000000),scale(1.000000,0.915059),translate(-0.498148,-0.516183)" id="radialGradient-1">
+            <stop stop-color="#C5BFB0" offset="0%"></stop>
+            <stop stop-color="#EBE8E3" offset="0%"></stop>
+            <stop stop-color="#C5BFB0" offset="72.6027256%"></stop>
+            <stop stop-color="#C5BFB0" offset="99.3032095%"></stop>
+            <stop stop-color="#C5BFB0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="test-intro-copy-3" fill="url(#radialGradient-1)">
+            <g id="Group-2">
+                <rect id="Rectangle" x="0" y="0" width="1440" height="1024"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
