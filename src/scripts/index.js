@@ -116,10 +116,7 @@ function onClick() {
 
 // EVENT LISTENER
 
-sunCerle.addEventListener("click", () => {
-  sunCerle.style.display = "none";
-  cardDisplay.style.display = "grid";
-});
+
 
 listItems.forEach((item) => {
   item.addEventListener("mouseover", () => {
@@ -131,6 +128,12 @@ listItems.forEach((item) => {
   item.addEventListener("click", onClick);
   item.addEventListener("click", display);
 });
+
+sunCerle.addEventListener("click", () => {
+  sunCerle.style.display = "none";
+  cardDisplay.style.display = "grid";
+});
+
 
 /* ******************************************************
  // Remove item
