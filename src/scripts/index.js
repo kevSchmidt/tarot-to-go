@@ -1,8 +1,6 @@
-
 import { data } from "./data.js";
 let parsedData = JSON.parse(data);
 console.log(parsedData);
-
 
 // SHUFFLE FUNCTION
 
@@ -69,13 +67,13 @@ function display() {
   console.log(card);
   console.log(this.id);
 
-
   if (counter < 4) {
     // Add image
     let newImg = document.createElement("img");
     newImg.src = `${photo}`; // assign value to the variable coming from data.js
     newImg.className = "imageAdd"; // assign class
     cardImage.appendChild(newImg); // send newImg to the div "cardImage"
+
     // Add title
     titleText += `${name} - `; // send values to the empty string titleText
     // Add text
@@ -88,12 +86,9 @@ function display() {
     titleText += `.`; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
 
-
     cardDisplay.style.display = "none";
     results.style.display = "grid";
     cardImage.style.display = "flex";
-
-
 
     setTimeout(function () {
       let textNode = document.createTextNode(titleText);
@@ -106,28 +101,25 @@ function display() {
   }
 }
 
-
 // ACTIVE ITEMS
 
- const listItems = document.querySelectorAll("div");
- function onClick() {
-   listItems.forEach((card) => {
-     this.classList.remove("hover");
-     this.classList.add("active");
-     if (counter > 2) {
-       this.classList.remove("active");
-     }
-   });
- }
-
+const listItems = document.querySelectorAll("div");
+function onClick() {
+  listItems.forEach((card) => {
+    this.classList.remove("hover");
+    this.classList.add("active");
+    if (counter > 2) {
+      this.classList.remove("active");
+    }
+  });
+}
 
 // EVENT LISTENER
 
-sunCerle.addEventListener("click", () =>  {
+sunCerle.addEventListener("click", () => {
   sunCerle.style.display = "none";
   cardDisplay.style.display = "grid";
 });
-
 
 listItems.forEach((item) => {
   item.addEventListener("mouseover", () => {
@@ -140,9 +132,6 @@ listItems.forEach((item) => {
   item.addEventListener("click", display);
 });
 
-
-
-
 /* ******************************************************
  // Remove item
  let span = document.createElement("span");
@@ -153,7 +142,6 @@ listItems.forEach((item) => {
  list.forEach((item) => {
    item.appendChild(span);
  });
-
  span.addEventListener("click", () => {
    newItem.remove();
  });
@@ -200,5 +188,3 @@ listItems.forEach((item) => {
  );
  console.log(list);
 ============================== */
-
-
