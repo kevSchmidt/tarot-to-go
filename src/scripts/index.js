@@ -1,8 +1,8 @@
-
 import { data } from "./data.js";
 let parsedData = JSON.parse(data);
 console.log(parsedData);
-
+let arrayObj = parsedData.splice(0, 8);
+console.log(arrayObj);
 
 // SHUFFLE FUNCTION
 
@@ -12,7 +12,7 @@ function shuffle(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
 }
-shuffle(parsedData);
+shuffle(arrayObj);
 
 // SECTIONS
 
@@ -45,7 +45,7 @@ circleImg.src = "./img/circle.png";
 
 // CREATE CARDS SELECTION
 
-parsedData.forEach((obj) => {
+arrayObj.forEach((obj) => {
   let { id, backCard, attribute } = obj;
   let list = document.querySelector("#cardList");
   let cardList = `
@@ -64,22 +64,24 @@ let interText = "";
 
 function display() {
   counter++; // each click adds a integer value to the counter variable
-  let card = parsedData.find((cards) => cards.id == this.id);
+  let card = arrayObj.find((cards) => cards.id == this.id);
   let { photo, name, text } = card;
+  // console.log(cards.id);
   console.log(card);
   console.log(this.id);
-
 
   if (counter < 4) {
     // Add image
     let newImg = document.createElement("img");
     newImg.src = `${photo}`; // assign value to the variable coming from data.js
     newImg.className = "imageAdd"; // assign class
-    cardImage.appendChild(newImg); // send newImg to the div "cardImage"
+    cardImage.appendChild(newImg);
+    // send newImg to the div "cardImage"
     // Add title
     titleText += `${name} - `; // send values to the empty string titleText
     // Add text
-    interText += `${text} `; // send values to the empty string interText
+    interText += `${text} `;
+    // send values to the empty string interText
   } else {
     console.log("it has been more than 3 choices"); // test purpose
   }
@@ -88,46 +90,41 @@ function display() {
     titleText += `.`; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
 
-
     cardDisplay.style.display = "none";
     results.style.display = "grid";
     cardImage.style.display = "flex";
-
-
 
     setTimeout(function () {
       let textNode = document.createTextNode(titleText);
       let textNode2 = document.createTextNode(interText);
       cardTitle.appendChild(textNode);
       cardDescription.appendChild(textNode2);
+      cardTitle.style.display = "flex";
       cardDescription.style.display = "flex";
-      cardTitle.style.display = "none";
-    }, 300);
+    }, 3000);
   }
 }
 
-
 // ACTIVE ITEMS
 
- const listItems = document.querySelectorAll("div");
- function onClick() {
-   listItems.forEach((card) => {
-     this.classList.remove("hover");
-     this.classList.add("active");
-     if (counter > 2) {
-       this.classList.remove("active");
-     }
-   });
- }
-
+const listItems = document.querySelectorAll(".cardSelection");
+console.log(listItems);
+function onClick() {
+  listItems.forEach((cards) => {
+    cards.classList.remove("hover");
+    cards.classList.add("active");
+    if (counter > 2) {
+      cards.classList.remove("active");
+    }
+  });
+}
 
 // EVENT LISTENER
 
-sunCerle.addEventListener("click", () =>  {
+sunCerle.addEventListener("click", () => {
   sunCerle.style.display = "none";
   cardDisplay.style.display = "grid";
 });
-
 
 listItems.forEach((item) => {
   item.addEventListener("mouseover", () => {
@@ -139,9 +136,6 @@ listItems.forEach((item) => {
   item.addEventListener("click", onClick);
   item.addEventListener("click", display);
 });
-
-
-
 
 /* ******************************************************
  // Remove item
@@ -200,5 +194,3 @@ listItems.forEach((item) => {
  );
  console.log(list);
 ============================== */
-
-
