@@ -1,8 +1,7 @@
 import { data } from "./data.js";
 let parsedData = JSON.parse(data);
 console.log(parsedData);
-let arrayObj = Object.entries(parsedData).splice(0, 8);
-console.log(typeof arrayObj);
+
 
 // SHUFFLE FUNCTION
 
@@ -69,6 +68,7 @@ function display() {
   console.log(card);
   console.log(this.id);
 
+
   if (counter < 4) {
     // Add image
     let newImg = document.createElement("img");
@@ -100,7 +100,6 @@ function display() {
       cardDescription.style.display = "flex";
       cardTitle.style.display = "none";
     }, 300);
-
   }
 }
 
@@ -119,6 +118,12 @@ function display() {
 
 // EVENT LISTENER
 
+sunCerle.addEventListener("click", () =>  {
+  sunCerle.style.display = "none";
+  cardDisplay.style.display = "grid";
+});
+
+
 listItems.forEach((item) => {
   item.addEventListener("mouseover", () => {
     item.classList.add("hover");
@@ -130,11 +135,7 @@ listItems.forEach((item) => {
   item.addEventListener("click", display);
 });
 
-sunCerle.addEventListener("click", () =>  {
-  sunCerle.style.display = "none";
-  cardDisplay.style.display = "grid";
 
-});
 
 
 /* ******************************************************
