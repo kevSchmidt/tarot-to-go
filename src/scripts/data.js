@@ -3,6 +3,7 @@ let tarCards = [
     id: 0,
     name: "The Fool",
     number: 0,
+    attribute: 0,
     text: "(fool) you will live happy forever and ever",
     photo: "./img/major00.jpg",
     backCard: "./img/backCard.jpg",
@@ -11,6 +12,7 @@ let tarCards = [
     id: 1,
     name: "The Magician",
     number: 1,
+    attribute: 1,
     text: "(Magicien) you will have good news very soon",
     photo: "./img/major01.jpg",
     backCard: "./img/backCard.jpg",
@@ -19,6 +21,7 @@ let tarCards = [
     id: 2,
     name: "The High Priestess",
     number: 2,
+    attribute: 2,
     text: " Priestess you will have good news very soon",
     photo: "./img/major02.jpg",
     backCard: "./img/backCard.jpg",
@@ -27,15 +30,16 @@ let tarCards = [
     id: 3,
     name: "The Empress",
     number: 3,
+    attribute: 3,
     text: "Empress you will have bad news very soon",
     photo: "./img/major03.jpg",
     backCard: "./img/backCard.jpg",
   },
-
   {
     id: 4,
     name: "The Emperor",
     number: 4,
+    attribute: 4,
     text: "Emperor you will have to take an important decision",
     photo: "./img/major04.jpg",
     backCard: "./img/backCard.jpg",
@@ -44,6 +48,7 @@ let tarCards = [
     id: 5,
     name: "The Hierophant",
     number: 5,
+    attribute: 5,
     text: "Hierophant you will have good news very soon",
     photo: "./img/major05.jpg",
     backCard: "./img/backCard.jpg",
@@ -52,6 +57,7 @@ let tarCards = [
     id: 6,
     name: "The Lovers",
     number: 6,
+    attribute: 6,
     text: "Lovers you will have good news very soon",
     photo: "./img/major06.jpg",
     backCard: "./img/backCard.jpg",
@@ -60,11 +66,12 @@ let tarCards = [
     id: 7,
     name: "The Chariot",
     number: 7,
+    attribute: 7,
     text: "Chariot you will have good news very soon",
     photo: "./img/major07.jpg",
     backCard: "./img/backCard.jpg",
+  },
 
-  }
   // {
   //   id: 8,
   //   name: "Justice",
@@ -177,7 +184,6 @@ let tarCards = [
   //   photo: "./img/major21.jpg",
   //   backCard: "./img/backCard.jpg",
   // },
-
 ];
 
 let data = JSON.stringify(tarCards);
