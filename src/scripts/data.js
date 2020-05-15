@@ -35,7 +35,6 @@ let tarCards = [
     photo: "./img/major03.jpg",
     backCard: "./img/backCard.jpg",
   },
-
   {
     id: 4,
     name: "The Emperor",
@@ -71,8 +70,8 @@ let tarCards = [
     text: "Chariot you will have good news very soon",
     photo: "./img/major07.jpg",
     backCard: "./img/backCard.jpg",
+  },
 
-  }
   // {
   //   id: 8,
   //   name: "Justice",
@@ -185,7 +184,6 @@ let tarCards = [
   //   photo: "./img/major21.jpg",
   //   backCard: "./img/backCard.jpg",
   // },
-
 ];
 
 let data = JSON.stringify(tarCards);
