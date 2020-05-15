@@ -1,7 +1,7 @@
 // MEDIA QUERIES
 // ORDER: Base + typography > general layout + grid > page layout > components
-
-@mixin respond($breakpoint) {
+@mixin responsive($breakpoint) {
+  // ========== Mobile =======
   // Moto 4 / Galaxy S5
   @if $breakpoint == phone-xs {
     @media (max-width: 360px) {
@@ -10,45 +10,45 @@
   }
   // IPhone 6 / 7 / 8 / X
   @if $breakpoint == phone-s {
-    @media (min-width: 375px) {
+    @media (max-width: 375px) {
       @content;
     }
   }
   // Pixel 2 / XL
   @if $breakpoint == phone-m {
-    @media (min-width: 411px) {
+    @media (max-width: 411px) {
       @content;
     }
   }
   // IPhone 6+ / 7+ / 8+
   @if $breakpoint == phone-l {
-    @media (min-width: 414px) {
+    @media (max-width: 414px) {
       @content;
     }
   }
-
+  // ========== Tablet =======
   // IPad
   @if $breakpoint == tablet {
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
       @content;
     }
   }
   // IPad Pro
   @if $breakpoint == tablet-xl {
-    @media (min-width: 1024px) {
+    @media (max-width: 1024px) {
       @content;
     }
   }
-
+  // ========== Laptop =======
   // Laptop
   @if $breakpoint == laptop {
-    @media (min-width: 1025px) {
+    @media (max-width: 1025px) {
       @content;
     }
   }
   // Laptop L
   @if $breakpoint == laptop-l {
-    @media (min-width: 1440px) {
+    @media (max-width: 1440px) {
       @content;
     }
   }
@@ -56,37 +56,6 @@
   @if $breakpoint == laptop-4k {
     @media (min-width: 2560px) {
       @content;
-    }
-  }
-}
-
-@mixin on-circle($item-count, $circle-size, $item-size) {
-  position: relative;
-  width:  $circle-size;
-  height: $circle-size;
-  padding: 0;
-  border-radius: 50%;     
-  
-  > * {
-    position: absolute;
-    top:  50%; 
-    left: 50%;
-    width:  $item-size;
-    height: auto;
-    margin: -($item-size / 2);
-  
-    $angle: (360 / $item-count);
-    $rot: 0;
-
-    @for $i from 0 through $item-count {
-      &:nth-of-type(#{$i}) {
-        transform: 
-          rotate($rot * 1deg) 
-          translate($circle-size / 2) 
-          rotate($rot * -1deg);
-      }
-
-      $rot: $rot + $angle;
     }
   }
 }

@@ -3,6 +3,7 @@ let parsedData = JSON.parse(data);
 console.log(parsedData);
 
 // SHUFFLE FUNCTION
+
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
@@ -12,18 +13,43 @@ function shuffle(arr) {
 shuffle(parsedData);
 
 // SECTIONS
+
+const mainGrid = document.querySelector(".mainGrid");
+const cardDisplay = document.querySelector("#cardList");
+const results = document.querySelector(".results");
 const cardImage = document.querySelector("#cardImage"); // red border
 const cardTitle = document.querySelector("#cardTitle"); // yellow border
 const cardDescription = document.querySelector("#cardDescription"); // blue border
 
+// INTRO ELEMENTS
+
+let sunCerle = document.createElement("div");
+sunCerle.className = "sunCerle";
+mainGrid.appendChild(sunCerle);
+
+let eye = document.createElement("div");
+eye.className = "eye";
+sunCerle.appendChild(eye);
+
+let sunImg = document.createElement("img");
+sunImg.className = "sun";
+sunCerle.appendChild(sunImg);
+sunImg.src = "./img/sun.svg";
+
+let circleImg = document.createElement("img");
+circleImg.className = "circle";
+sunCerle.appendChild(circleImg);
+circleImg.src = "./img/circle.png";
+
 // CREATE CARDS SELECTION
+
 parsedData.forEach((obj) => {
   let { id, backCard, attribute } = obj;
   let list = document.querySelector("#cardList");
   let cardList = `
-  <li id = ${id} class= "cardSelection" name= card${attribute}>
+  <div id = ${id} class= "cardSelection" name= card${attribute}>
    <img src = "${backCard}" class = "back-card"></img>
-  </li>
+  </div>
   `;
   list.innerHTML += cardList;
 });
@@ -45,17 +71,8 @@ function display() {
     // Add image
     let newImg = document.createElement("img");
     newImg.src = `${photo}`; // assign value to the variable coming from data.js
-    newImg.className = "imageAdd slide-in-top"; // assign class ######################################################
+    newImg.className = "imageAdd"; // assign class
     cardImage.appendChild(newImg); // send newImg to the div "cardImage"
-
-    // EVENT LISTENER NEW ##############################################################################################
-    newImg.addEventListener("mouseover", () => {
-      newImg.classList.add("rotate-vert-center");
-    });
-    newImg.addEventListener("mouseleave", () => {
-      newImg.classList.remove("rotate-vert-center");
-      newImg.classList.remove("slide-in-top");
-    });
 
     // Add title
     titleText += `${name} - `; // send values to the empty string titleText
@@ -69,32 +86,41 @@ function display() {
     titleText += `.`; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
 
+    cardDisplay.style.display = "none";
+    results.style.display = "grid";
+    cardImage.style.display = "flex";
+
     setTimeout(function () {
       let textNode = document.createTextNode(titleText);
       let textNode2 = document.createTextNode(interText);
       cardTitle.appendChild(textNode);
       cardDescription.appendChild(textNode2);
-    }, 3000);
+      cardDescription.style.display = "flex";
+      cardTitle.style.display = "none";
+    }, 300);
   }
 }
 
 // ACTIVE ITEMS
-const listItems = document.querySelectorAll("li");
+
+const listItems = document.querySelectorAll("div");
 function onClick() {
   listItems.forEach((card) => {
     this.classList.remove("hover");
     this.classList.add("active");
-    // NEW #################################################################################
-    this.classList.add("flip-out-hor-top");
     if (counter > 2) {
       this.classList.remove("active");
-      // NEW ##############################################################################
-      this.classList.remove("flip-out-hor-top");
     }
   });
 }
 
 // EVENT LISTENER
+
+sunCerle.addEventListener("click", () => {
+  sunCerle.style.display = "none";
+  cardDisplay.style.display = "grid";
+});
+
 listItems.forEach((item) => {
   item.addEventListener("mouseover", () => {
     item.classList.add("hover");
@@ -104,42 +130,6 @@ listItems.forEach((item) => {
   });
   item.addEventListener("click", onClick);
   item.addEventListener("click", display);
-});
-// Design
-
-// round of cards
-
-// Center grid
-
-let container = document.querySelector(".container");
-
-// Intro elements
-
-let sunCerle = document.createElement("div");
-sunCerle.className = "sunCerle";
-container.appendChild(sunCerle);
-
-let eye = document.createElement("div");
-eye.className = "eye";
-sunCerle.appendChild(eye);
-
-let sunImg = document.createElement("img");
-sunImg.className = "sun";
-sunCerle.appendChild(sunImg);
-sunImg.src = "./img/sun.png";
-
-let circleImg = document.createElement("img");
-circleImg.className = "circle";
-sunCerle.appendChild(circleImg);
-circleImg.src = "./img/circle.png";
-
-// Intro event
-
-const cardDisplay = document.querySelector("#cardList");
-
-sunCerle.addEventListener("click", () => {
-  sunCerle.style.display = "none";
-  cardDisplay.style.display = "grid";
 });
 
 /* ******************************************************

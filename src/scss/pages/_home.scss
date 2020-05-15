@@ -1,5 +1,6 @@
 body {
-  background-color: #c5bfb0;
+  // background-color: #C5BFB0 ;
+  background-image: url("../img/background.svg");
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -8,114 +9,238 @@ body {
   align-items: center;
 }
 
-// Central grid
+// MAIN GRID
 
-.container {
-  width: 650px;
-  height: 650px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+.mainGrid {
+  width: 80rem;
+  height: 70rem;
+  display: grid;
+  background-repeat: no-repeat;
+  grid-template-rows: auto 55rem auto;
+  grid-template-columns: auto 55rem auto;
+  justify-items: center;
   align-items: center;
 }
 
-// Card selection
+// CARDS
+
 #cardList {
   display: none;
-  width: 650px;
-  height: 650px;
-  // border: 2px rgb(255, 255, 255) solid;
-  // border-radius: 50%;
+  width: 51rem;
+  height: 51rem;
+  grid-row: 2/2;
+  grid-column: 2/2;
+  border: 4px rgba(255, 255, 255, 1) solid;
+  border-radius: 50%;
   list-style: none;
   // background-image: url("../img/table.png");
   background-repeat: no-repeat;
-  @include on-circle($item-count: 22, $circle-size: 50rem, $item-size: 13rem);
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "a b c d e"
+    "f g h i j"
+    "k l m n o"
+    "p q r s t"
+    "u v w x y";
+
+  // justify-items: center;
+  // align-items: center;
 }
 
 #cardList img {
-  width: 10rem;
+  width: 11rem;
   height: auto;
-}
-
-// li[name="card0"] img, li[name="card1"] img, li[name="card2"] img, li[name="card3"] img, li[name="card4"] img, li[name="card5"] img, li[name="card6"] img, li[name="card7"] img {
-//   width: 15rem;
-//   height: auto;
-// }
-
-// li[name="card8"] img, li[name="card9"] img, li[name="card10"] img, li[name="card11"] img, li[name="card12"] img, li[name="card13"] img, li[name="card14"] img, li[name="card15"] img, li[name="card16"] img, li[name="card17"] img, li[name="card18"] img, li[name="card19"] img, li[name="card20"] img, li[name="card21"] img {
-//   display: none;
-//   &:hover,:active{
-//     display: none;
-//   }
-// }
-
-#cardImage {
-  width: 20rem;
-  height: auto;
-}
-
-.imageAdd img {
-  width: 5rem;
-  height: auto;
-}
-
-#cardList line {
-  display: flex;
-  width: 50rem;
-}
-
-#cardImg {
-  height: 5rem;
 }
 
 .cardSelection {
-  width: 2rem;
-  margin: 0.3rem;
-}
-.back-card {
-  width: 2.5rem;
-}
-
-.divAdd {
-  border-top: 1px solid black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
 }
 
-.titleAdd {
-  margin: 0 2.5rem;
+div[name="card0"] {
+  grid-area: c;
+  justify-self: center;
+  align-self: start;
+  transform: translateY(-8rem);
+  background-color: white;
+  padding: 6px;
+  border: 1px black solid;
+  border-radius: 4px;
+  margin: 0;
 }
 
-.descriptionAdd {
-  margin: 0 2.5rem;
+div[name="card1"] {
+  grid-area: a;
+  justify-self: center;
+  align-self: start;
+  transform: rotate(-45deg);
+  background-color: white;
+  padding: 6px;
+  border: 1px black solid;
+  border-radius: 4px;
 }
 
-// HOVER, ACTIVE etc..
-.active {
-  transform: scale(1.1);
+div[name="card2"] {
+  justify-self: center;
+  align-self: start;
+  grid-area: k;
+  transform: translateX(0) rotate(90deg) translateY(8rem);
+  background-color: white;
+  padding: 6px;
+  border: 1px black solid;
+  border-radius: 4px;
 }
 
-.back-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 4px 8px 6px black;
+div[name="card3"] {
+  justify-self: center;
+  align-self: start;
+  grid-area: u;
+  transform: rotate(-135deg);
+  background-color: white;
+  padding: 6px;
+  border: 1px black solid;
+  border-radius: 4px;
 }
 
-// Intro elements
+div[name="card4"] {
+  justify-self: center;
+  align-self: start;
+  grid-area: w;
+  transform: translateX(0) rotate(180deg) translateY(-8rem);
+  background-color: white;
+  padding: 6px;
+  border: 1px black solid;
+  border-radius: 4px;
+}
+
+div[name="card5"] {
+  justify-self: center;
+  align-self: start;
+  grid-area: y;
+  transform: rotate(135deg);
+  background-color: white;
+  padding: 6px;
+  border: 1px black solid;
+  border-radius: 4px;
+}
+
+div[name="card6"] {
+  justify-self: center;
+  align-self: start;
+  grid-area: o;
+  transform: translateX(0) rotate(90deg) translateY(-7rem);
+  background-color: white;
+  padding: 6px;
+  border: 1px black solid;
+  border-radius: 4px;
+}
+
+div[name="card7"] {
+  justify-self: center;
+  align-self: start;
+  grid-area: e;
+  transform: rotate(45deg);
+  border-radius: 6px;
+  background-color: white;
+  padding: 6px;
+  border: 1px black solid;
+  border-radius: 4px;
+}
+
+h1 {
+  grid-area: m;
+  font-size: 2.2rem;
+  font-weight: 500;
+  justify-self: center;
+  align-self: center;
+}
+
+#cardImage {
+  display: none;
+  width: 80%;
+  grid-area: cards;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#cardImage img {
+  width: 12rem;
+  height: auto;
+  background-color: white;
+  padding: 6px;
+  border: 1px black solid;
+  border-radius: 4px;
+}
+
+// RESULTS
+
+.results {
+  display: none;
+  width: 65rem;
+  height: 65rem;
+  grid-row: 2/2;
+  grid-column: 2/2;
+  // border: 4px rgba(255, 255, 255, 1) solid;
+  border-radius: 50%;
+  // background-image: url("../img/table.png");
+  background-repeat: no-repeat;
+  grid-template-areas:
+    "cards"
+    "text";
+
+  justify-items: center;
+  align-items: center;
+}
+
+.newImg {
+  width: 4rem;
+  height: auto;
+}
+.newImg img {
+  width: 4rem;
+  height: auto;
+}
+
+.cardTitle {
+  display: none;
+}
+
+#cardDescription {
+  display: none;
+  width: 100%;
+  grid-area: text;
+  font-size: 1.4rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.6rem;
+  color: black;
+  // border: 1px blue solid;
+}
+
+// INTRO ELEMENTS
 
 .sunCerle {
   position: relative;
+  grid-row: 2/2;
+  grid-column: 2/2;
   width: 100%;
   height: 100%;
+  // border: 4px yellow solid;
 }
 
 .eye {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: 1px #000000 solid;
   background-color: rgb(255, 255, 255);
   position: absolute;
-  margin: 49.5%;
+  margin: 49.1%;
+  transform: translateX(-0.5rem);
   z-index: 3;
   -webkit-animation: 8s linear 0s infinite alternate move_eye;
   animation: 8s linear 0s infinite alternate move_eye;
@@ -125,21 +250,23 @@ body {
 
 .sun {
   position: relative;
-  top: 117px;
-  left: 150px;
-  width: 350px;
+  top: 6.7rem;
+  left: 9.6rem;
+  width: 35rem;
   height: auto;
   z-index: 2;
+  // border: 4px blue solid;
 }
 
 .circle {
-  position: absolute;
-  top: 20px;
-  left: 50px;
-  width: 550px;
+  position: relative;
+  top: -43.9rem;
+  left: -0.5rem;
+  width: 55rem;
   height: auto;
   z-index: 3;
   -webkit-animation: circle 150s linear infinite;
+  // border: 4px red solid;
 }
 
 // Intro elements animation
@@ -155,18 +282,35 @@ body {
 
 @-webkit-keyframes move_eye {
   from {
-    left: -0.2%;
+    left: -4%;
   }
   to {
-    left: 0.2%;
+    left: 10%;
   }
 }
 @keyframes move_eye {
   from {
-    left: -0.4%;
+    left: -4%;
   }
   to {
-    left: 0.4%;
+    left: 10%;
+  }
+}
+
+@-webkit-keyframes move_eye_top {
+  from {
+    top: -0.2%;
+  }
+  to {
+    top: 0%;
+  }
+}
+@keyframes move_eye_top {
+  from {
+    top: -0.2%;
+  }
+  to {
+    top: 0%;
   }
 }
 
@@ -184,126 +328,5 @@ body {
   }
   to {
     top: 0%;
-  }
-}
-
-#cardTitle {
-  padding: 1rem 10vw;
-  display: flex;
-  border: 2px dotted yellow;
-}
-
-#cardDescription {
-  padding: 1rem 10vw;
-  border: 2px dotted blue;
-}
-
-// KEVIN ANIMATION
-/* animation: name duration timing-function delay iteration-count direction fill-mode; */
-
-/**************************************
- * animation flip-out-hor-top (CARDS SELECTED)
-********** */
-
-// class
-.flip-out-hor-top {
-  -webkit-animation: flip-out-hor-top 0.65s
-    cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: flip-out-hor-top 0.65s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-
-// keyframes
-@-webkit-keyframes flip-out-hor-top {
-  0% {
-    -webkit-transform: rotateX(0);
-    transform: rotateX(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotateX(70deg);
-    transform: rotateX(70deg);
-    opacity: 0;
-  }
-}
-@keyframes flip-out-hor-top {
-  0% {
-    -webkit-transform: rotateX(0);
-    transform: rotateX(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotateX(70deg);
-    transform: rotateX(70deg);
-    opacity: 0;
-  }
-}
-
-/*********************************
- * animation slide-in-top (CARDS REVEAL)
-******** */
-
-// class
-.slide-in-top {
-  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-// keyframes
-@-webkit-keyframes slide-in-top {
-  0% {
-    -webkit-transform: translateY(-1000px);
-    transform: translateY(-1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-top {
-  0% {
-    -webkit-transform: translateY(-1000px);
-    transform: translateY(-1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/*********************************
- * animation rotate-vert-center (CARDS REVEAL HOVER)
-******* */
-
-// class
-.rotate-vert-center {
-  -webkit-animation: rotate-vert-center 0.8s
-    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  animation: rotate-vert-center 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    both;
-}
-
-// keyframes
-@-webkit-keyframes rotate-vert-center {
-  0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-@keyframes rotate-vert-center {
-  0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
   }
 }
