@@ -266,12 +266,21 @@ h1 {
   height: auto;
   z-index: 3;
   -webkit-animation: circle 150s linear infinite;
+  animation: circle 150s linear infinite;
   // border: 4px red solid;
 }
 
 // Intro elements animation
 
 @-webkit-keyframes circle {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes circle {
   from {
     -webkit-transform: rotate(0deg);
   }
