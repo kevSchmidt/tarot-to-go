@@ -1,5 +1,5 @@
 body {
-  background-color: #C5BFB0 ;
+  background-color: #c5bfb0;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -29,7 +29,7 @@ body {
   list-style: none;
   // background-image: url("../img/table.png");
   background-repeat: no-repeat;
-  @include on-circle($item-count: 22, $circle-size: 50rem, $item-size: 13rem);   
+  @include on-circle($item-count: 22, $circle-size: 50rem, $item-size: 13rem);
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(5, 1fr);
 }
@@ -42,30 +42,29 @@ body {
 // li[name="card0"] img, li[name="card1"] img, li[name="card2"] img, li[name="card3"] img, li[name="card4"] img, li[name="card5"] img, li[name="card6"] img, li[name="card7"] img {
 //   width: 15rem;
 //   height: auto;
-// } 
+// }
 
 // li[name="card8"] img, li[name="card9"] img, li[name="card10"] img, li[name="card11"] img, li[name="card12"] img, li[name="card13"] img, li[name="card14"] img, li[name="card15"] img, li[name="card16"] img, li[name="card17"] img, li[name="card18"] img, li[name="card19"] img, li[name="card20"] img, li[name="card21"] img {
 //   display: none;
 //   &:hover,:active{
 //     display: none;
 //   }
-// } 
+// }
 
 #cardImage {
   width: 20rem;
   height: auto;
 }
 
-
-.imageAdd img{
+.imageAdd img {
   width: 5rem;
   height: auto;
 }
 
-#cardList line{
+#cardList line {
   display: flex;
   width: 50rem;
- }
+}
 
 #cardImg {
   height: 5rem;
@@ -78,9 +77,6 @@ body {
 .back-card {
   width: 2.5rem;
 }
-
-
-
 
 .divAdd {
   border-top: 1px solid black;
@@ -99,7 +95,7 @@ body {
   transform: scale(1.1);
 }
 
-.hover {
+.back-card:hover {
   transform: translateY(-5px);
   box-shadow: 4px 8px 6px black;
 }
@@ -146,27 +142,50 @@ body {
   -webkit-animation: circle 150s linear infinite;
 }
 
-// Intro elements animation 
+// Intro elements animation
 
 @-webkit-keyframes circle {
-  from{
-      -webkit-transform: rotate(0deg);
+  from {
+    -webkit-transform: rotate(0deg);
   }
-  to{
-      -webkit-transform: rotate(360deg);
+  to {
+    -webkit-transform: rotate(360deg);
   }
 }
 
-@-webkit-keyframes move_eye { from { left:-0.2%; } to { left:0.2%; }  }
-        @keyframes move_eye { from { left:-0.4%; } to { left:0.4%; }  }
+@-webkit-keyframes move_eye {
+  from {
+    left: -0.2%;
+  }
+  to {
+    left: 0.2%;
+  }
+}
+@keyframes move_eye {
+  from {
+    left: -0.4%;
+  }
+  to {
+    left: 0.4%;
+  }
+}
 
-@-webkit-keyframes move_eye_top { from { top:-0.4%; } to { top:0%; }  }
-        @keyframes move_eye_top { from { top:-0.4%; } to { top:0%; }  }
-
-
-
-
-
+@-webkit-keyframes move_eye_top {
+  from {
+    top: -0.4%;
+  }
+  to {
+    top: 0%;
+  }
+}
+@keyframes move_eye_top {
+  from {
+    top: -0.4%;
+  }
+  to {
+    top: 0%;
+  }
+}
 
 #cardTitle {
   padding: 1rem 10vw;
@@ -179,7 +198,112 @@ body {
   border: 2px dotted blue;
 }
 
+// KEVIN ANIMATION
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
 
+/**************************************
+ * animation flip-out-hor-top (CARDS SELECTED)
+********** */
 
+// class
+.flip-out-hor-top {
+  -webkit-animation: flip-out-hor-top 0.65s
+    cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: flip-out-hor-top 0.65s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
 
+// keyframes
+@-webkit-keyframes flip-out-hor-top {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateX(70deg);
+    transform: rotateX(70deg);
+    opacity: 0;
+  }
+}
+@keyframes flip-out-hor-top {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateX(70deg);
+    transform: rotateX(70deg);
+    opacity: 0;
+  }
+}
 
+/*********************************
+ * animation slide-in-top (CARDS REVEAL)
+******** */
+
+// class
+.slide-in-top {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+// keyframes
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*********************************
+ * animation rotate-vert-center (CARDS REVEAL HOVER)
+******* */
+
+// class
+.rotate-vert-center {
+  -webkit-animation: rotate-vert-center 0.8s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: rotate-vert-center 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    both;
+}
+
+// keyframes
+@-webkit-keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}

@@ -1,6 +1,6 @@
 import { data } from "./data.js";
 let parsedData = JSON.parse(data);
-// console.log(parsedData);
+console.log(parsedData);
 
 // SHUFFLE FUNCTION
 function shuffle(arr) {
@@ -41,13 +41,22 @@ function display() {
   console.log(card);
   console.log(this.id);
 
-
   if (counter < 4) {
     // Add image
     let newImg = document.createElement("img");
     newImg.src = `${photo}`; // assign value to the variable coming from data.js
-    newImg.className = "imageAdd"; // assign class
+    newImg.className = "imageAdd slide-in-top"; // assign class ######################################################
     cardImage.appendChild(newImg); // send newImg to the div "cardImage"
+
+    // EVENT LISTENER NEW ##############################################################################################
+    newImg.addEventListener("mouseover", () => {
+      newImg.classList.add("rotate-vert-center");
+    });
+    newImg.addEventListener("mouseleave", () => {
+      newImg.classList.remove("rotate-vert-center");
+      newImg.classList.remove("slide-in-top");
+    });
+
     // Add title
     titleText += `${name} - `; // send values to the empty string titleText
     // Add text
@@ -67,23 +76,23 @@ function display() {
       cardDescription.appendChild(textNode2);
     }, 3000);
   }
-
 }
 
-
-
 // ACTIVE ITEMS
- const listItems = document.querySelectorAll("li");
- function onClick() {
-   listItems.forEach((card) => {
-     this.classList.remove("hover");
-     this.classList.add("active");
-     if (counter > 2) {
-       this.classList.remove("active");
-     }
-   });
- }
-
+const listItems = document.querySelectorAll("li");
+function onClick() {
+  listItems.forEach((card) => {
+    this.classList.remove("hover");
+    this.classList.add("active");
+    // NEW #################################################################################
+    this.classList.add("flip-out-hor-top");
+    if (counter > 2) {
+      this.classList.remove("active");
+      // NEW ##############################################################################
+      this.classList.remove("flip-out-hor-top");
+    }
+  });
+}
 
 // EVENT LISTENER
 listItems.forEach((item) => {
@@ -96,10 +105,9 @@ listItems.forEach((item) => {
   item.addEventListener("click", onClick);
   item.addEventListener("click", display);
 });
-// Design 
+// Design
 
-// round of cards 
-
+// round of cards
 
 // Center grid
 
@@ -129,18 +137,10 @@ circleImg.src = "./img/circle.png";
 
 const cardDisplay = document.querySelector("#cardList");
 
-sunCerle.addEventListener("click", () =>  {
+sunCerle.addEventListener("click", () => {
   sunCerle.style.display = "none";
   cardDisplay.style.display = "grid";
 });
-
-
-
-
-
-
-
-
 
 /* ******************************************************
  // Remove item
@@ -198,4 +198,3 @@ sunCerle.addEventListener("click", () =>  {
  );
  console.log(list);
 ============================== */
-
