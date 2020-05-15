@@ -87,9 +87,11 @@ function display() {
     titleText += `.`; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
 
+
     cardDisplay.style.display = "none";
     results.style.display = "grid";
     cardImage.style.display = "flex";
+
 
 
     setTimeout(function () {
@@ -103,6 +105,7 @@ function display() {
   }
 }
 
+
 // ACTIVE ITEMS
 
  const listItems = document.querySelectorAll("div");
@@ -115,6 +118,7 @@ function display() {
      }
    });
  }
+
 
 // EVENT LISTENER
 
