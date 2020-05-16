@@ -1,5 +1,6 @@
-// MEDIA QUERIES
-// ORDER: Base + typography > general layout + grid > page layout > components
+// MEDIA QUERIES (A remplacer dans  SCSS-mixin)
+// ORDER: From desktop to mobile version:
+
 @mixin responsive($breakpoint) {
   // ========== Mobile =======
   // Moto 4 / Galaxy S5
@@ -8,24 +9,28 @@
       @content;
     }
   }
+
   // IPhone 6 / 7 / 8 / X
   @if $breakpoint == phone-s {
     @media (max-width: 375px) {
       @content;
     }
   }
+
   // Pixel 2 / XL
   @if $breakpoint == phone-m {
     @media (max-width: 411px) {
       @content;
     }
   }
+
   // IPhone 6+ / 7+ / 8+
   @if $breakpoint == phone-l {
     @media (max-width: 414px) {
       @content;
     }
   }
+
   // ========== Tablet =======
   // IPad
   @if $breakpoint == tablet {
@@ -33,12 +38,14 @@
       @content;
     }
   }
+
   // IPad Pro
   @if $breakpoint == tablet-xl {
     @media (max-width: 1024px) {
       @content;
     }
   }
+
   // ========== Laptop =======
   // Laptop
   @if $breakpoint == laptop {
@@ -46,12 +53,14 @@
       @content;
     }
   }
+
   // Laptop L
   @if $breakpoint == laptop-l {
     @media (max-width: 1440px) {
       @content;
     }
   }
+
   // Laptop 4K
   @if $breakpoint == laptop-4k {
     @media (min-width: 2560px) {
