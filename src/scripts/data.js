@@ -79,6 +79,7 @@ let tarCards = [
     photo: "./img/major07.jpg",
     backCard: "./img/backCard.jpg",
   },
+
   {
     id: 8,
     name: "Justice",

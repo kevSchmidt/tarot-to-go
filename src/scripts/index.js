@@ -2,7 +2,9 @@ import { data } from "./data.js";
 let parsedData = JSON.parse(data);
 console.log(parsedData);
 
+
 let arrayObj = parsedData.splice(0, 8); // select only 8 cards from the deck
+
 console.log(arrayObj);
 
 // SHUFFLE FUNCTION
@@ -69,6 +71,7 @@ function display() {
   counter++; // each click adds a integer value to the counter variable
   let card = arrayObj.find((cards) => cards.id == this.id);
   let { photo, name, text } = card;
+  // console.log(cards.id);
   console.log(card);
   console.log(this.id);
 
@@ -76,6 +79,7 @@ function display() {
     // Add image
     let newImg = document.createElement("img");
     newImg.src = `${photo}`; // assign value to the variable coming from data.js
+
     newImg.className = "imageAdd slide-in"; // assign class - Animation entrance result cards
     cardImage.appendChild(newImg); // send newImg to the div "cardImage"
 
@@ -89,10 +93,12 @@ function display() {
       newImg.classList.remove("slide-in-top");
     });
 
+
     // Add title
     titleText += `${name} - `; // send values to the empty string titleText
     // Add text
-    interText += `${text} `; // send values to the empty string interText
+    interText += `${text} `;
+    // send values to the empty string interText
   } else {
     console.log("it has been more than 3 choices"); // test purpose
   }
@@ -101,7 +107,9 @@ function display() {
     titleText += `.`; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
 
+
     // Delay
+
     setTimeout(function () {
       cardDisplay.style.display = "none";
       results.style.display = "grid";
@@ -111,9 +119,12 @@ function display() {
       let textNode2 = document.createTextNode(interText);
       cardTitle.appendChild(textNode);
       cardDescription.appendChild(textNode2);
+      cardTitle.style.display = "flex";
       cardDescription.style.display = "flex";
+
       cardTitle.style.display = "none";
     }, 800);
+
   }
 }
 
@@ -125,6 +136,7 @@ listItems.forEach((arrayElements, index) => {
   listItems[index].className += ` disappear${index}`;
 });
 
+
 function onClick() {
   listItems.forEach(() => {
     this.classList.remove("hover");
@@ -134,6 +146,7 @@ function onClick() {
     if (counter > 2) {
       this.classList.remove("active");
       this.classList.remove("disappear");
+
     }
   });
 }
