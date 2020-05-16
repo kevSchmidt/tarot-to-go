@@ -51,16 +51,6 @@ body {
   height: auto;
 }
 
-#cardList img:hover {
-  width: 12rem;
-  height: auto;
-}
-
-#cardList img:active {
-  width: 14rem;
-  height: auto;
-}
-
 .cardSelection {
   display: flex;
   flex-flow: row nowrap;

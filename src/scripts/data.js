@@ -4,7 +4,7 @@ let tarCards = [
     name: "The Fool",
     number: 0,
     attribute: 0,
-    text: "(fool) you will live happy forever and ever",
+    text: "Folly, mania, extravagance, intoxication, delirium, frenzy. Reversed: Negligence, absence, distribution, carelessness, apathy, nullity, vanity"",
     photo: "./img/major00.jpg",
     backCard: "./img/backCard.jpg",
   },

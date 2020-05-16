@@ -90,11 +90,10 @@ function display() {
     titleText += `.`; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
 
-    cardDisplay.style.display = "none";
-    results.style.display = "grid";
-    cardImage.style.display = "flex";
-
     setTimeout(function () {
+      cardDisplay.style.display = "none";
+      results.style.display = "grid";
+      cardImage.style.display = "flex";
       let textNode = document.createTextNode(titleText);
       let textNode2 = document.createTextNode(interText);
       cardTitle.appendChild(textNode);
@@ -110,11 +109,11 @@ function display() {
 const listItems = document.querySelectorAll(".cardSelection");
 console.log(listItems);
 function onClick() {
-  listItems.forEach((cards) => {
-    cards.classList.remove("hover");
-    cards.classList.add("active");
+  listItems.forEach(() => {
+    this.classList.remove("hover");
+    this.classList.add("active");
     if (counter > 2) {
-      cards.classList.remove("active");
+      this.classList.remove("active");
     }
   });
 }
