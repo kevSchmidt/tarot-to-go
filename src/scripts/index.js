@@ -2,6 +2,11 @@ import { data } from "./data.js";
 let parsedData = JSON.parse(data);
 console.log(parsedData);
 
+
+let arrayObj = parsedData.splice(0, 8); // select only 8 cards from the deck
+
+console.log(arrayObj);
+
 // SHUFFLE FUNCTION
 
 function shuffle(arr) {
@@ -10,16 +15,18 @@ function shuffle(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
 }
-shuffle(parsedData);
+shuffle(arrayObj);
 
 // SECTIONS
 
 const mainGrid = document.querySelector(".mainGrid");
 const cardDisplay = document.querySelector("#cardList");
 const results = document.querySelector(".results");
-const cardImage = document.querySelector("#cardImage"); // red border
-const cardTitle = document.querySelector("#cardTitle"); // yellow border
-const cardDescription = document.querySelector("#cardDescription"); // blue border
+const cardImage = document.querySelector("#cardImage");
+const cardTitle = document.querySelector("#cardTitle");
+const cardDescription = document.querySelector("#cardDescription");
+
+cardDescription.classList.add("text-focus"); // add class for text animation
 
 // INTRO ELEMENTS
 
@@ -43,7 +50,7 @@ circleImg.src = "./img/circle.png";
 
 // CREATE CARDS SELECTION
 
-parsedData.forEach((obj) => {
+arrayObj.forEach((obj) => {
   let { id, backCard, attribute } = obj;
   let list = document.querySelector("#cardList");
   let cardList = `
@@ -62,8 +69,9 @@ let interText = "";
 
 function display() {
   counter++; // each click adds a integer value to the counter variable
-  let card = parsedData.find((cards) => cards.id == this.id);
+  let card = arrayObj.find((cards) => cards.id == this.id);
   let { photo, name, text } = card;
+  // console.log(cards.id);
   console.log(card);
   console.log(this.id);
 
@@ -71,13 +79,26 @@ function display() {
     // Add image
     let newImg = document.createElement("img");
     newImg.src = `${photo}`; // assign value to the variable coming from data.js
-    newImg.className = "imageAdd"; // assign class
+
+    newImg.className = "imageAdd slide-in"; // assign class - Animation entrance result cards
     cardImage.appendChild(newImg); // send newImg to the div "cardImage"
+
+    // Event Listener (add hover for image)
+    newImg.addEventListener("mouseover", () => {
+      newImg.classList.add("hover");
+      newImg.style.cursor = "pointer";
+    });
+    newImg.addEventListener("mouseleave", () => {
+      newImg.classList.remove("hover");
+      newImg.classList.remove("slide-in-top");
+    });
+
 
     // Add title
     titleText += `${name} - `; // send values to the empty string titleText
     // Add text
-    interText += `${text} `; // send values to the empty string interText
+    interText += `${text} `;
+    // send values to the empty string interText
   } else {
     console.log("it has been more than 3 choices"); // test purpose
   }
@@ -86,30 +107,46 @@ function display() {
     titleText += `.`; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
 
-    cardDisplay.style.display = "none";
-    results.style.display = "grid";
-    cardImage.style.display = "flex";
+
+    // Delay
 
     setTimeout(function () {
+      cardDisplay.style.display = "none";
+      results.style.display = "grid";
+      cardImage.style.display = "flex";
+
       let textNode = document.createTextNode(titleText);
       let textNode2 = document.createTextNode(interText);
       cardTitle.appendChild(textNode);
       cardDescription.appendChild(textNode2);
+      cardTitle.style.display = "flex";
       cardDescription.style.display = "flex";
+
       cardTitle.style.display = "none";
-    }, 300);
+    }, 800);
+
   }
 }
 
 // ACTIVE ITEMS
 
-const listItems = document.querySelectorAll("div");
+const listItems = document.querySelectorAll(".cardSelection");
+listItems.forEach((arrayElements, index) => {
+  console.log(listItems[index]);
+  listItems[index].className += ` disappear${index}`;
+});
+
+
 function onClick() {
-  listItems.forEach((card) => {
+  listItems.forEach(() => {
     this.classList.remove("hover");
-    this.classList.add("active");
+    this.classList.add("active"); // card selected is active
+    this.classList.add("disappear"); // card selected disappear on click
+
     if (counter > 2) {
       this.classList.remove("active");
+      this.classList.remove("disappear");
+
     }
   });
 }
