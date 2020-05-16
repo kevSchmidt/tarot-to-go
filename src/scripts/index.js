@@ -131,6 +131,11 @@ function display() {
 // ACTIVE ITEMS
 
 const listItems = document.querySelectorAll(".cardSelection");
+listItems.forEach((arrayElements, index) => {
+  console.log(listItems[index]);
+  listItems[index].className += ` disappear${index}`;
+});
+
 
 function onClick() {
   listItems.forEach(() => {
