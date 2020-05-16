@@ -234,22 +234,6 @@ h1 {
   // border: 4px yellow solid;
 }
 
-.eye {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 1px #000000 solid;
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  margin: 49.1%;
-  transform: translateX(-0.5rem);
-  z-index: 3;
-  -webkit-animation: 8s linear 0s infinite alternate move_eye;
-  animation: 8s linear 0s infinite alternate move_eye;
-  -webkit-animation: 8s linear 0s infinite alternate move_eye_top;
-  animation: 8s linear 0s infinite alternate move_eye_top;
-}
-
 .sun {
   position: relative;
   top: 6.7rem;
@@ -260,6 +244,17 @@ h1 {
   // border: 4px blue solid;
 }
 
+// ========== ANIMATIONS ===
+
+.hover {
+  box-shadow: 3px 2px 6px black;
+}
+
+/*********************************
+ * circle (animation for intro)
+******** */
+
+// class
 .circle {
   position: relative;
   top: -43.9rem;
@@ -272,8 +267,7 @@ h1 {
   // border: 4px red solid;
 }
 
-// Intro elements animation
-
+// keyframe
 @-webkit-keyframes circle {
   from {
     -webkit-transform: rotate(0deg);
@@ -291,6 +285,28 @@ h1 {
   }
 }
 
+/*********************************
+ * move-eye (animation for intro)
+******** */
+
+// class
+.eye {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px #000000 solid;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  margin: 49.1%;
+  transform: translateX(-0.5rem);
+  z-index: 3;
+  -webkit-animation: 8s linear 0s infinite alternate move_eye;
+  animation: 8s linear 0s infinite alternate move_eye;
+  -webkit-animation: 8s linear 0s infinite alternate move_eye_top;
+  animation: 8s linear 0s infinite alternate move_eye_top;
+}
+
+// keyframe
 @-webkit-keyframes move_eye {
   from {
     left: -4%;
@@ -342,58 +358,18 @@ h1 {
   }
 }
 
-// KEVIN ANIMATIONS
-// ANIMATIONS
-
-.hover {
-  box-shadow: 3px 2px 4px black;
-}
-
 /*********************************
- * animation shadow-drop-bl (CARDS REVEAL HOVER)
-******* */
-
-// class
-.shadow-drop-bl {
-  -webkit-animation: shadow-drop-bl 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
-  animation: shadow-drop-bl 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-// keyframes
-@-webkit-keyframes shadow-drop-bl {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-  100% {
-    -webkit-box-shadow: -12px 12px 20px -12px black;
-    box-shadow: -12px 12px 20px -12px black;
-  }
-}
-@keyframes shadow-drop-bl {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-  100% {
-    -webkit-box-shadow: -12px 12px 20px -12px black;
-    box-shadow: -12px 12px 20px -12px black;
-  }
-}
-
-/*********************************
- * animation slide-in-top (CARDS REVEAL)
+ * slide-in (animation for image entrance)
 ******** */
 
 // class
-.slide-in-top {
-  -webkit-animation: slide-in-top 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-top 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.slide-in {
+  -webkit-animation: slide-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 // keyframes
-@-webkit-keyframes slide-in-top {
+@-webkit-keyframes slide-in {
   0% {
     -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
@@ -405,7 +381,7 @@ h1 {
     opacity: 1;
   }
 }
-@keyframes slide-in-top {
+@keyframes slide-in {
   0% {
     -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
@@ -419,55 +395,53 @@ h1 {
 }
 
 /**************************************
- * animation flip-out-hor-top (CARDS SELECTED)
+ * disappear (animation for card selected)
 ********** */
 
 // class
-.flip-out-hor-top {
-  -webkit-animation: flip-out-hor-top 0.65s
-    cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: flip-out-hor-top 0.65s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+.disappear {
+  -webkit-animation: disappear 0.65s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: disappear 0.65s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 // keyframes
-@-webkit-keyframes flip-out-hor-top {
+@-webkit-keyframes disappear {
   0% {
     -webkit-transform: rotateX(0);
     transform: rotateX(0);
     opacity: 1;
   }
   100% {
-    -webkit-transform: rotateX(70deg);
-    transform: rotateX(70deg);
+    -webkit-transform: rotateX(70deg) translateX(15rem);
+    transform: rotateX(70deg) translateX(15rem);
     opacity: 0;
   }
 }
-@keyframes flip-out-hor-top {
+@keyframes disappear {
   0% {
     -webkit-transform: rotateX(0);
     transform: rotateX(0);
     opacity: 1;
   }
   100% {
-    -webkit-transform: rotateX(70deg);
-    transform: rotateX(70deg);
+    -webkit-transform: rotateX(70deg) translateX(15rem);
+    transform: rotateX(70deg) translateX(15rem);
     opacity: 0;
   }
 }
 
 /*********************************
- * animation text-focus-in (CARDS NAME)
+ * text-focus (animation for text apparition)
 ********** */
 
 // class
-.text-focus-in {
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-    both;
-  animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+.text-focus {
+  -webkit-animation: text-focus 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 // keyframes
-@-webkit-keyframes text-focus-in {
+@-webkit-keyframes text-focus {
   0% {
     -webkit-filter: blur(12px);
     filter: blur(12px);
@@ -479,7 +453,7 @@ h1 {
     opacity: 1;
   }
 }
-@keyframes text-focus-in {
+@keyframes text-focus {
   0% {
     -webkit-filter: blur(12px);
     filter: blur(12px);
