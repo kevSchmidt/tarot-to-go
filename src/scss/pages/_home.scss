@@ -56,6 +56,8 @@ body {
   flex-flow: row nowrap;
   justify-content: center;
   align-content: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px black;
 }
 
 div[name="card0"] {
@@ -85,7 +87,7 @@ div[name="card2"] {
   justify-self: center;
   align-self: start;
   grid-area: k;
-  transform: translateX(0) rotate(90deg) translateY(8rem);
+  transform: translateX(-15rem) rotate(-90deg) translateY(8rem);
   background-color: white;
   padding: 6px;
   border: 1px black solid;
@@ -266,12 +268,21 @@ h1 {
   height: auto;
   z-index: 3;
   -webkit-animation: circle 150s linear infinite;
+  animation: circle 150s linear infinite;
   // border: 4px red solid;
 }
 
 // Intro elements animation
 
 @-webkit-keyframes circle {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes circle {
   from {
     -webkit-transform: rotate(0deg);
   }
@@ -328,5 +339,155 @@ h1 {
   }
   to {
     top: 0%;
+  }
+}
+
+// KEVIN ANIMATIONS
+// ANIMATIONS
+
+.hover {
+  box-shadow: 3px 2px 4px black;
+}
+
+/*********************************
+ * animation shadow-drop-bl (CARDS REVEAL HOVER)
+******* */
+
+// class
+.shadow-drop-bl {
+  -webkit-animation: shadow-drop-bl 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: shadow-drop-bl 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+// keyframes
+@-webkit-keyframes shadow-drop-bl {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: -12px 12px 20px -12px black;
+    box-shadow: -12px 12px 20px -12px black;
+  }
+}
+@keyframes shadow-drop-bl {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: -12px 12px 20px -12px black;
+    box-shadow: -12px 12px 20px -12px black;
+  }
+}
+
+/*********************************
+ * animation slide-in-top (CARDS REVEAL)
+******** */
+
+// class
+.slide-in-top {
+  -webkit-animation: slide-in-top 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+// keyframes
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/**************************************
+ * animation flip-out-hor-top (CARDS SELECTED)
+********** */
+
+// class
+.flip-out-hor-top {
+  -webkit-animation: flip-out-hor-top 0.65s
+    cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: flip-out-hor-top 0.65s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+// keyframes
+@-webkit-keyframes flip-out-hor-top {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateX(70deg);
+    transform: rotateX(70deg);
+    opacity: 0;
+  }
+}
+@keyframes flip-out-hor-top {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateX(70deg);
+    transform: rotateX(70deg);
+    opacity: 0;
+  }
+}
+
+/*********************************
+ * animation text-focus-in (CARDS NAME)
+********** */
+
+// class
+.text-focus-in {
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+// keyframes
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
   }
 }
