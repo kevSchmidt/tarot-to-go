@@ -51,6 +51,16 @@ body {
   height: auto;
 }
 
+#cardList img:hover {
+  width: 12rem;
+  height: auto;
+}
+
+#cardList img:active {
+  width: 14rem;
+  height: auto;
+}
+
 .cardSelection {
   display: flex;
   flex-flow: row nowrap;
@@ -234,6 +244,7 @@ h1 {
   // border: 4px yellow solid;
 }
 
+
 .sun {
   position: relative;
   top: 6.7rem;
@@ -243,6 +254,7 @@ h1 {
   z-index: 2;
   // border: 4px blue solid;
 }
+
 
 // ========== ANIMATIONS ===
 
@@ -255,6 +267,7 @@ h1 {
 ******** */
 
 // class
+
 .circle {
   position: relative;
   top: -43.9rem;
@@ -267,13 +280,16 @@ h1 {
   // border: 4px red solid;
 }
 
+
 // keyframe
+
 @-webkit-keyframes circle {
   from {
     -webkit-transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
+
   }
 }
 @keyframes circle {
@@ -307,6 +323,7 @@ h1 {
 }
 
 // keyframe
+
 @-webkit-keyframes move_eye {
   from {
     left: -4%;
@@ -323,6 +340,7 @@ h1 {
     left: 10%;
   }
 }
+
 
 @-webkit-keyframes move_eye_top {
   from {
@@ -463,5 +481,6 @@ h1 {
     -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1;
+
   }
 }
