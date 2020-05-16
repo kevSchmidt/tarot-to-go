@@ -1,7 +1,8 @@
 import { data } from "./data.js";
 let parsedData = JSON.parse(data);
 console.log(parsedData);
-let arrayObj = parsedData.splice(0, 8);
+
+let arrayObj = parsedData.splice(0, 8); // select only 8 cards from the deck
 console.log(arrayObj);
 
 // SHUFFLE FUNCTION
@@ -19,11 +20,11 @@ shuffle(arrayObj);
 const mainGrid = document.querySelector(".mainGrid");
 const cardDisplay = document.querySelector("#cardList");
 const results = document.querySelector(".results");
-const cardImage = document.querySelector("#cardImage"); // red border
-const cardTitle = document.querySelector("#cardTitle"); // yellow border
-const cardDescription = document.querySelector("#cardDescription"); // blue border
+const cardImage = document.querySelector("#cardImage");
+const cardTitle = document.querySelector("#cardTitle");
+const cardDescription = document.querySelector("#cardDescription");
 
-cardDescription.classList.add("text-focus-in");
+cardDescription.classList.add("text-focus"); // add class for text animation
 
 // INTRO ELEMENTS
 
@@ -75,16 +76,16 @@ function display() {
     // Add image
     let newImg = document.createElement("img");
     newImg.src = `${photo}`; // assign value to the variable coming from data.js
-    newImg.className = "imageAdd slide-in-top"; // assign class (Animation entrance result cards)
+    newImg.className = "imageAdd slide-in"; // assign class - Animation entrance result cards
     cardImage.appendChild(newImg); // send newImg to the div "cardImage"
 
-    // EVENT LISTENER (Animations result cards)
+    // Event Listener (add hover for image)
     newImg.addEventListener("mouseover", () => {
-      newImg.classList.add("shadow-drop-bl");
+      newImg.classList.add("hover");
       newImg.style.cursor = "pointer";
     });
     newImg.addEventListener("mouseleave", () => {
-      newImg.classList.remove("shadow-drop-bl");
+      newImg.classList.remove("hover");
       newImg.classList.remove("slide-in-top");
     });
 
@@ -100,6 +101,7 @@ function display() {
     titleText += `.`; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
 
+    // Delay
     setTimeout(function () {
       cardDisplay.style.display = "none";
       results.style.display = "grid";
@@ -111,7 +113,7 @@ function display() {
       cardDescription.appendChild(textNode2);
       cardDescription.style.display = "flex";
       cardTitle.style.display = "none";
-    }, 1000);
+    }, 800);
   }
 }
 
@@ -121,12 +123,12 @@ const listItems = document.querySelectorAll(".cardSelection");
 function onClick() {
   listItems.forEach(() => {
     this.classList.remove("hover");
-    this.classList.add("active");
-    this.classList.add("flip-out-hor-top"); // (Animation disparition)
+    this.classList.add("active"); // card selected is active
+    this.classList.add("disappear"); // card selected disappear on click
 
     if (counter > 2) {
       this.classList.remove("active");
-      this.classList.remove("flip-out-hor-top"); // (Animation disparition)
+      this.classList.remove("disappear");
     }
   });
 }
