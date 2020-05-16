@@ -4,7 +4,8 @@ let tarCards = [
     name: "The Fool",
     number: 0,
     attribute: 0,
-    text: "(fool) you will live happy forever and ever",
+    text:
+      "Your manic tendencies might lead you to problematic situations, to show some extravagance is good but beware of excesses. Use it at the right moment to avoid the states of intoxication and delirium that you know so well. The focus on yourself is important, but too much vanity might drive you to neglect important sections of your live. Look for the right balance.",
     photo: "./img/major00.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -13,7 +14,8 @@ let tarCards = [
     name: "The Magician",
     number: 1,
     attribute: 1,
-    text: "(Magicien) you will have good news very soon",
+    text:
+      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
     photo: "./img/major01.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -22,7 +24,8 @@ let tarCards = [
     name: "The High Priestess",
     number: 2,
     attribute: 2,
-    text: " Priestess you will have good news very soon",
+    text:
+      " The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
     photo: "./img/major02.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -31,7 +34,8 @@ let tarCards = [
     name: "The Empress",
     number: 3,
     attribute: 3,
-    text: "Empress you will have bad news very soon",
+    text:
+      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
     photo: "./img/major03.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -40,7 +44,8 @@ let tarCards = [
     name: "The Emperor",
     number: 4,
     attribute: 4,
-    text: "Emperor you will have to take an important decision",
+    text:
+      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
     photo: "./img/major04.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -49,7 +54,8 @@ let tarCards = [
     name: "The Hierophant",
     number: 5,
     attribute: 5,
-    text: "Hierophant you will have good news very soon",
+    text:
+      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
     photo: "./img/major05.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -58,7 +64,8 @@ let tarCards = [
     name: "The Lovers",
     number: 6,
     attribute: 6,
-    text: "Lovers you will have good news very soon",
+    text:
+      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
     photo: "./img/major06.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -67,7 +74,8 @@ let tarCards = [
     name: "The Chariot",
     number: 7,
     attribute: 7,
-    text: "Chariot you will have good news very soon",
+    text:
+      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
     photo: "./img/major07.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -75,7 +83,8 @@ let tarCards = [
     id: 8,
     name: "Justice",
     attribute: 8,
-    text: "Justice text",
+    text:
+      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
     photo: "./img/major08.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -83,7 +92,8 @@ let tarCards = [
     id: 9,
     name: "The Hermit",
     attribute: 9,
-    text: "Hermit text",
+    text:
+      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
     photo: "./img/major09.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -91,7 +101,8 @@ let tarCards = [
     id: 10,
     name: "Wheel of Fortune",
     attribute: 10,
-    text: "Fortune text",
+    text:
+      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
     photo: "./img/major10.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -99,7 +110,8 @@ let tarCards = [
     id: 11,
     name: "Strength",
     attribute: 11,
-    text: "Strength text",
+    text:
+      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
     photo: "./img/major11.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -107,7 +119,8 @@ let tarCards = [
     id: 12,
     name: "The Hanged Man",
     attribute: 12,
-    text: "Hanged text",
+    text:
+      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
     photo: "./img/major12.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -115,7 +128,8 @@ let tarCards = [
     id: 13,
     name: "Death",
     attribute: 13,
-    text: "Death text",
+    text:
+      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
     photo: "./img/major13.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -123,7 +137,8 @@ let tarCards = [
     id: 14,
     name: "Temperance",
     attribute: 14,
-    text: "Temperance text",
+    text:
+      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
     photo: "./img/major14.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -131,7 +146,8 @@ let tarCards = [
     id: 15,
     name: "The Devil",
     attribute: 15,
-    text: "Devil text",
+    text:
+      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
     photo: "./img/major15.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -139,7 +155,8 @@ let tarCards = [
     id: 16,
     name: "The Tower",
     attribute: 16,
-    text: "Tower text",
+    text:
+      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
     photo: "./img/major16.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -147,7 +164,8 @@ let tarCards = [
     id: 17,
     name: "The Star",
     attribute: 17,
-    text: "Star text",
+    text:
+      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
     photo: "./img/major17.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -155,7 +173,8 @@ let tarCards = [
     id: 18,
     name: "The Moon",
     attribute: 18,
-    text: "Moon text",
+    text:
+      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
     photo: "./img/major18.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -163,7 +182,8 @@ let tarCards = [
     id: 19,
     name: "The Sun",
     attribute: 19,
-    text: "Sun text",
+    text:
+      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
     photo: "./img/major19.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -171,7 +191,8 @@ let tarCards = [
     id: 20,
     name: "Judgement",
     attribute: 20,
-    text: "Judgement text",
+    text:
+      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
     photo: "./img/major20.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -179,7 +200,8 @@ let tarCards = [
     id: 21,
     name: "The World",
     attribute: 21,
-    text: "World text",
+    text:
+      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
     photo: "./img/major21.jpg",
     backCard: "./img/backCard.jpg",
   },
