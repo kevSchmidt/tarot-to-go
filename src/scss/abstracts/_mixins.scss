@@ -1,36 +1,6 @@
-// MEDIA QUERIES (A remplacer dans  SCSS-mixin)
-// ORDER: From desktop to mobile version:
+// MEDIA QUERIES
 
 @mixin responsive($breakpoint) {
-  // ========== Mobile =======
-  // Moto 4 / Galaxy S5
-  @if $breakpoint == phone-xs {
-    @media (max-width: 360px) {
-      @content;
-    }
-  }
-
-  // IPhone 6 / 7 / 8 / X
-  @if $breakpoint == phone-s {
-    @media (max-width: 375px) {
-      @content;
-    }
-  }
-
-  // Pixel 2 / XL
-  @if $breakpoint == phone-m {
-    @media (max-width: 411px) {
-      @content;
-    }
-  }
-
-  // IPhone 6+ / 7+ / 8+
-  @if $breakpoint == phone-l {
-    @media (max-width: 414px) {
-      @content;
-    }
-  }
-
   // 730px
   @if $breakpoint == mobile {
     @media (max-width: 730px) {

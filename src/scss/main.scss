@@ -1,16 +1,10 @@
 @charset "UTF-8";
 
 // 1. Configuration
-@import "abstracts/variables", "abstracts/mixins";
+@import "abstracts/mixins";
 
 // 2. Base
 @import "base/base", "base/typography";
 
-// 3. Layout
-@import "layout/header", "layout/footer";
-
-// 4. Components
-@import "components/button";
-
-// 5. Page
-@import "pages/home";
+// 3. Page
+@import "pages/home", "pages/animation";
