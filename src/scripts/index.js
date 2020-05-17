@@ -61,12 +61,6 @@ arrayObj.forEach((obj) => {
   console.log(list);
 });
 
-// const listItems = document.querySelectorAll(".cardSelection");
-// listItems.forEach((x, index) => {
-//   console.log(listItems[index]);
-//   listItems[index].className += ` card${index}`;
-// });
-
 // DISPLAY CARDS
 
 let counter = 0;
