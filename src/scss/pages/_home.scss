@@ -266,6 +266,7 @@ h1 {
 ******** */
 
 // class
+
 .circle {
   position: relative;
   top: -43.9rem;
@@ -279,6 +280,7 @@ h1 {
 }
 
 // keyframe
+
 @-webkit-keyframes circle {
   from {
     -webkit-transform: rotate(0deg);
@@ -318,6 +320,7 @@ h1 {
 }
 
 // keyframe
+
 @-webkit-keyframes move_eye {
   from {
     left: -4%;
