@@ -88,12 +88,6 @@ function display() {
     newImg.className = "imageAdd slide-in"; // assign class - Animation entrance result cards
     cardImage.appendChild(newImg); // send newImg to the div "cardImage"
 
-    // // add title
-    // let newTitle = document.createElement("span");
-    // newTitle.innerHTML = `${name}`;
-    // newTitle.className = "titles";
-    // cardTitle.appendChild(newTitle);
-
     // Event Listener (add hover for image)
     newImg.addEventListener("mouseover", () => {
       newImg.classList.add("hover");
@@ -138,7 +132,7 @@ function display() {
 const listItems = document.querySelectorAll(".cardSelection");
 // listItems.forEach((arrayElements, index) => {
 //   console.log(listItems[index]);
-//   listItems[index].className += ` disappear${index}`;
+//   listItems[index].className += ` card${index}`;
 // });
 
 function onClick() {
@@ -172,60 +166,3 @@ listItems.forEach((item) => {
   item.addEventListener("click", onClick);
   item.addEventListener("click", display);
 });
-
-/* ******************************************************
- // Remove item
- let span = document.createElement("span");
- let text = document.createElement("i");
- text.className = "fas fa-times-circle";
- span.className = "close";
- span.appendChild(text);
- list.forEach((item) => {
-   item.appendChild(span);
- });
- span.addEventListener("click", () => {
-   newItem.remove();
- });
- ****************************************** 
-//removed
-
-    // Add title
-    // let newTitle = document.createElement("div");
-    // newTitle.className = "titleAdd";
-    // newTitle.innerHTML = `${name}`;
-
-    // Add text
-    // let newDescription = document.createElement("div");
-    // newDescription.className = "descriptionAdd";
-    // newDescription.innerHTML = `${text}`;
-
-
-******************************************
-
-
-// const list = [...parsedData].reduce(
-//   (acc, a) =>
-//     acc + `<p class="cardDescription__text" id="${a.text}">${a.text}</p>`,
-//   ""
-// );
-// console.log(list);
-
-
-
-/* ======= Gabriela comment ========================
- // Add title
- let newTitle = document.createElement("div");
- newTitle.className = "titleAdd";
- newTitle.innerHTML = `${name}`;
- // Add text
- let newDescription = document.createElement("div");
- newDescription.className = "descriptionAdd";
- newDescription.innerHTML = `${text}`;
- // Gabriela function
- const list = [...parsedData].reduce(
-   (acc, a) =>
-     acc + `<p class="cardDescription__text" id="${a.text}">${a.text}</p>`,
-   ""
- );
- console.log(list);
-============================== */
