@@ -52,12 +52,19 @@ arrayObj.forEach((obj) => {
   let { id, backCard, attribute } = obj;
   let list = document.querySelector("#cardList");
   let cardList = `
-  <div id = ${id} class= "cardSelection" name= card${attribute}>
+  <div id = ${id} class= "cardSelection card${id}" name= card${attribute}>
    <img src = "${backCard}" class = "back-card"></img>
   </div>
   `;
   list.innerHTML += cardList;
+  console.log(list);
 });
+
+// const listItems = document.querySelectorAll(".cardSelection");
+// listItems.forEach((x, index) => {
+//   console.log(listItems[index]);
+//   listItems[index].className += ` card${index}`;
+// });
 
 // DISPLAY CARDS
 
@@ -116,7 +123,6 @@ function display() {
       cardDisplay.style.display = "none";
       results.style.display = "grid";
       cardImage.style.display = "flex";
-
       let textNode = document.createTextNode(titleText);
       let textNode2 = document.createTextNode(interText);
       cardTitle.appendChild(textNode);
@@ -139,6 +145,7 @@ function onClick() {
   listItems.forEach(() => {
     this.classList.remove("hover");
     this.classList.add("active"); // card selected is active
+    console.log(listItems);
     this.classList.add("disappear"); // card selected disappear on click
 
     if (counter > 2) {
