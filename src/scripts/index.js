@@ -79,6 +79,12 @@ function display() {
     newImg.className = "imageAdd slide-in"; // assign class - Animation entrance result cards
     cardImage.appendChild(newImg); // send newImg to the div "cardImage"
 
+    // // add title
+    // let newTitle = document.createElement("span");
+    // newTitle.innerHTML = `${name}`;
+    // newTitle.className = "titles";
+    // cardTitle.appendChild(newTitle);
+
     // Event Listener (add hover for image)
     newImg.addEventListener("mouseover", () => {
       newImg.classList.add("hover");
@@ -112,7 +118,7 @@ function display() {
       cardTitle.appendChild(textNode);
       cardDescription.appendChild(textNode2);
       cardDescription.style.display = "flex";
-      cardTitle.style.display = "none";
+      cardTitle.style.display = "flex";
     }, 800);
   }
 }
