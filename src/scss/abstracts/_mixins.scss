@@ -31,39 +31,9 @@
     }
   }
 
-  // ========== Tablet =======
-  // IPad
-  @if $breakpoint == tablet {
-    @media (max-width: 768px) {
-      @content;
-    }
-  }
-
-  // IPad Pro
-  @if $breakpoint == tablet-xl {
-    @media (max-width: 1024px) {
-      @content;
-    }
-  }
-
-  // ========== Laptop =======
-  // Laptop
-  @if $breakpoint == laptop {
-    @media (max-width: 1025px) {
-      @content;
-    }
-  }
-
-  // Laptop L
-  @if $breakpoint == laptop-l {
-    @media (max-width: 1440px) {
-      @content;
-    }
-  }
-
-  // Laptop 4K
-  @if $breakpoint == laptop-4k {
-    @media (min-width: 2560px) {
+  // 730px
+  @if $breakpoint == mobile {
+    @media (max-width: 730px) {
       @content;
     }
   }
