@@ -4,19 +4,15 @@
     <title>Rectangle</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <radialGradient cx="49.8147758%" cy="51.6183205%" fx="49.8147758%" fy="51.6183205%" r="74.5788348%" gradientTransform="translate(0.498148,0.516183),scale(0.711111,1.000000),rotate(180.000000),scale(1.000000,0.915059),translate(-0.498148,-0.516183)" id="radialGradient-1">
-            <stop stop-color="#C5BFB0" offset="0%"></stop>
-            <stop stop-color="#EBE8E3" offset="0%"></stop>
-            <stop stop-color="#C5BFB0" offset="72.6027256%"></stop>
-            <stop stop-color="#C5BFB0" offset="99.3032095%"></stop>
-            <stop stop-color="#C5BFB0" offset="100%"></stop>
+        <radialGradient cx="49.9382327%" cy="50.0324873%" fx="49.9382327%" fy="50.0324873%" r="101.910515%" gradientTransform="translate(0.499382,0.500325),scale(0.711111,1.000000),rotate(180.000000),scale(1.000000,1.042549),translate(-0.499382,-0.500325)" id="radialGradient-1">
+            <stop stop-color="#CDC7B7" offset="0%"></stop>
+            <stop stop-color="#C0BAAB" offset="34.0410231%"></stop>
+            <stop stop-color="#7B766A" offset="100%"></stop>
         </radialGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="test-intro-copy-3" fill="url(#radialGradient-1)">
-            <g id="Group-2">
-                <rect id="Rectangle" x="0" y="0" width="1440" height="1024"></rect>
-            </g>
+            <rect id="Rectangle" x="0" y="0" width="1440" height="1024"></rect>
         </g>
     </g>
 </svg>

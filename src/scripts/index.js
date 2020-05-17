@@ -2,9 +2,7 @@ import { data } from "./data.js";
 let parsedData = JSON.parse(data);
 console.log(parsedData);
 
-
 let arrayObj = parsedData.splice(0, 8); // select only 8 cards from the deck
-
 console.log(arrayObj);
 
 // SHUFFLE FUNCTION
@@ -83,6 +81,12 @@ function display() {
     newImg.className = "imageAdd slide-in"; // assign class - Animation entrance result cards
     cardImage.appendChild(newImg); // send newImg to the div "cardImage"
 
+    // // add title
+    // let newTitle = document.createElement("span");
+    // newTitle.innerHTML = `${name}`;
+    // newTitle.className = "titles";
+    // cardTitle.appendChild(newTitle);
+
     // Event Listener (add hover for image)
     newImg.addEventListener("mouseover", () => {
       newImg.classList.add("hover");
@@ -92,7 +96,6 @@ function display() {
       newImg.classList.remove("hover");
       newImg.classList.remove("slide-in-top");
     });
-
 
     // Add title
     titleText += `${name} - `; // send values to the empty string titleText
@@ -107,7 +110,6 @@ function display() {
     titleText += `.`; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
 
-
     // Delay
 
     setTimeout(function () {
@@ -121,21 +123,17 @@ function display() {
       cardDescription.appendChild(textNode2);
       cardTitle.style.display = "flex";
       cardDescription.style.display = "flex";
-
-      cardTitle.style.display = "none";
     }, 800);
-
   }
 }
 
 // ACTIVE ITEMS
 
 const listItems = document.querySelectorAll(".cardSelection");
-listItems.forEach((arrayElements, index) => {
-  console.log(listItems[index]);
-  listItems[index].className += ` disappear${index}`;
-});
-
+// listItems.forEach((arrayElements, index) => {
+//   console.log(listItems[index]);
+//   listItems[index].className += ` disappear${index}`;
+// });
 
 function onClick() {
   listItems.forEach(() => {
@@ -146,7 +144,6 @@ function onClick() {
     if (counter > 2) {
       this.classList.remove("active");
       this.classList.remove("disappear");
-
     }
   });
 }
