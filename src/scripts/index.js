@@ -3,7 +3,6 @@ let parsedData = JSON.parse(data);
 console.log(parsedData);
 
 let arrayObj = parsedData.splice(0, 8); // select only 8 cards from the deck
-
 console.log(arrayObj);
 
 // SHUFFLE FUNCTION
@@ -89,6 +88,12 @@ function display() {
     newImg.className = "imageAdd slide-in"; // assign class - Animation entrance result cards
     cardImage.appendChild(newImg); // send newImg to the div "cardImage"
 
+    // // add title
+    // let newTitle = document.createElement("span");
+    // newTitle.innerHTML = `${name}`;
+    // newTitle.className = "titles";
+    // cardTitle.appendChild(newTitle);
+
     // Event Listener (add hover for image)
     newImg.addEventListener("mouseover", () => {
       newImg.classList.add("hover");
@@ -124,8 +129,6 @@ function display() {
       cardDescription.appendChild(textNode2);
       cardTitle.style.display = "flex";
       cardDescription.style.display = "flex";
-
-      cardTitle.style.display = "none";
     }, 800);
   }
 }
@@ -133,9 +136,9 @@ function display() {
 // ACTIVE ITEMS
 
 const listItems = document.querySelectorAll(".cardSelection");
-// listItems.forEach((x, index) => {
+// listItems.forEach((arrayElements, index) => {
 //   console.log(listItems[index]);
-//   listItems[index].className += ` card${index}`;
+//   listItems[index].className += ` disappear${index}`;
 // });
 
 function onClick() {
