@@ -62,15 +62,15 @@ Task management
 
 ##### first page: intro
 
-![screenshot 1](readme_img/screenshot_app_1.png)
+![screenshot 1](./readme_img/screenshot_app_1.png)
 
 ##### second page: card choice
 
-![screenshot 2](./readme_img/screenshot_app_1.png)
+![screenshot 2](./readme_img/screenshot_app_2.png)
 
 ##### third page: result, card reading
 
-![screenshot 3](/readme_img/screenshot_app_1.png)
+![screenshot 3](./readme_img/screenshot_app_3.png)
 
 #### SPECIAL FEATURES
 
