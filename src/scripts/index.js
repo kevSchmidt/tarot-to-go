@@ -99,7 +99,7 @@ function display() {
     });
 
     // Add title
-    titleText += `${name} - `; // send values to the empty string titleText
+    titleText += `${name}, `; // send values to the empty string titleText
     // Add text
     interText += `${text} `;
     // send values to the empty string interText
@@ -108,7 +108,7 @@ function display() {
   }
 
   if (counter === 3) {
-    titleText += `.`; // still to be fixed, replacing the dash with a dot
+    titleText += " "; // still to be fixed, replacing the dash with a dot
     interText += `.`; // still to be fixed, replacing the dash with a dot
 
     // Delay
