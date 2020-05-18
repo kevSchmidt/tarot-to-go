@@ -22,8 +22,13 @@ Project
 │   │   index.html
 │   └───styles
 |   └───scss
-|   |   └───style.scss
+|   │    └───main
+│   │    └───abstracts
+│   │    └───base
+│   │    └───pages
 │   └───scripts
+│   │     └───data
+│   │     └───index.js
 |   └───img
 └───dist
 ```
@@ -63,6 +68,18 @@ Task management
 ```
 
 #### PROJECT INTERFACE
+
+##### first page: intro
+
+![screenshot 1](img/Screenshot_app_1.png)
+
+##### second page: card choice
+
+![screenshot 2](img/Screenshot_app_1.png)
+
+##### third page: result, card reading
+
+![screenshot 3](img/Screenshot_app_1.png)
 
 #### SPECIAL FEATURES
 
