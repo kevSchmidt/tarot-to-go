@@ -14,7 +14,6 @@
 #### SASS STRUCTURE
 
 ```
-
 Project
 │   README.md
 │   package.json
@@ -65,4 +64,12 @@ Task management
 
 #### SPECIAL FEATURES
 
+we used the Fisher Yates algorithm to shuffle the cards and applied it to our code:
+
+(Fisher Yates Shuffle Wikipedia) [https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle]
+
 #### EXTERNAL TOOLS
+
+we used animista for the animations
+
+(animista) [https://animista.net/]
