@@ -62,11 +62,11 @@ Task management
 
 ##### first page: intro
 
-![screenshot 1](/readme_img/Screenshot_app_1.png)
+![screenshot 1](readme_img/Screenshot_app_1.png)
 
 ##### second page: card choice
 
-![screenshot 2](/readme_img/Screenshot_app_1.png)
+![screenshot 2](./readme_img/Screenshot_app_1.png)
 
 ##### third page: result, card reading
 
