@@ -15,7 +15,7 @@ let tarCards = [
     number: 1,
     attribute: 1,
     text:
-      "Your manic tendencies might lead you to problematic situations, to show some extravagance is good but beware of excesses. Use it at the right moment to avoid the states of intoxication and delirium that you know so well. The focus on yourself is important, but too much vanity might drive you to neglect important sections of your live. Look for the right balance.",
+      "You will have to take out your diplomatic skills to address an upcoming loss. Disaster and snares of enemies are coming, but don't give up on your self-confidence and your mental strength. Otherwise you will let the door open for physical and mental disease, as well as general disgrace and restlessness.",
     photo: "./img/major01.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -55,7 +55,7 @@ let tarCards = [
     number: 5,
     attribute: 5,
     text:
-      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
+      "Marriage is in the horizon, but what looks like a dream come true can turn into a world of servitude and captivity. Don't forget who you are and never stop looking for inspiration. A good predisposition to understand one another is crucial in life and in relationships, concord over kindness, and strength over weakness.",
     photo: "./img/major05.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -93,7 +93,7 @@ let tarCards = [
     name: "The Hermit",
     attribute: 9,
     text:
-      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
+      "There are hints of treason watching and the only thing you can do is approach it with circumspection and prudence. Don't be too cautious and resign to experience important things for this reason. Life will tell you what is good for you, everything is good in the right amount. Be transparent and avoid corruption.",
     photo: "./img/major09.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -102,7 +102,7 @@ let tarCards = [
     name: "Wheel of Fortune",
     attribute: 10,
     text:
-      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
+      "Luck will be on your side, fortune will turn around and face you and you will experience real success and felicity. You will be surrounded by abundance and an increase in your life standards, but be careful to not overpass the border and fall into vanity and superfluity. Appreciate life as it is.",
     photo: "./img/major10.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -111,7 +111,7 @@ let tarCards = [
     name: "Strength",
     attribute: 11,
     text:
-      "To ignore the future isn’t a problem for you because you love mystery, and secrets. You are mysterious yourself and this silence might hide real wisdom. This wisdom was gathered through the years, driven by a passionate spirit. Your passion is not only spiritual but also physical, so try to avoid superficiality and keep nourishing your spirit.",
+      "Your judgement is right, just trust it and it will lead you to the triumph of the deserving side in law. However, excessive judgement might lead to biased decisions and bigotry, as well as an excessive severity in your approach to life and decisions. Keep your temper and good judgement, don't let others tell you what to think.",
     photo: "./img/major11.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -120,7 +120,7 @@ let tarCards = [
     name: "The Hanged Man",
     attribute: 12,
     text:
-      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
+      "Real wisdom will only come through circumspection and sacrifice. The capacity of discernment between right and wrong decisions will be a mix of intuition and wisdom. No prophecy won't be able to conquer a wise soul. The only trial that matters is the one inside you, never forget that you are part of the crowd and the body politic.",
     photo: "./img/major12.jpg",
     backCard: "./img/backCard.jpg",
   },
