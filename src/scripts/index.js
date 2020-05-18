@@ -70,7 +70,6 @@ function display() {
   counter++; // each click adds a integer value to the counter variable
   let card = arrayObj.find((cards) => cards.id == this.id);
   let { photo, name, text } = card;
-  // console.log(cards.id);
   console.log(card);
   console.log(this.id);
 
@@ -79,16 +78,10 @@ function display() {
     let newImg = document.createElement("img");
     newImg.src = `${photo}`; // assign value to the variable coming from data.js
 
-    newImg.className = "imageAdd slide-in"; // assign class - Animation entrance result cards
+    newImg.className = "imageAdd slide-in"; // assign class - animation entrance result cards
     cardImage.appendChild(newImg); // send newImg to the div "cardImage"
 
-    // // add title
-    // let newTitle = document.createElement("span");
-    // newTitle.innerHTML = `${name}`;
-    // newTitle.className = "titles";
-    // cardTitle.appendChild(newTitle);
-
-    // Event Listener (add hover for image)
+    // Event Listener (add hover for cards in result)
     newImg.addEventListener("mouseover", () => {
       newImg.classList.add("hover");
       newImg.style.cursor = "pointer";
@@ -99,7 +92,7 @@ function display() {
     });
 
     // Add title
-    titleText += `${name}, `; // send values to the empty string titleText
+    titleText += `${name} `; // send values to the empty string titleText
     // Add text
     interText += `${text} `;
     // send values to the empty string interText
@@ -107,12 +100,8 @@ function display() {
     console.log("it has been more than 3 choices"); // test purpose
   }
 
+  // Delay
   if (counter === 3) {
-    titleText += " "; // still to be fixed, replacing the dash with a dot
-    interText += `.`; // still to be fixed, replacing the dash with a dot
-
-    // Delay
-
     setTimeout(function () {
       cardDisplay.style.display = "none";
       results.style.display = "grid";
@@ -130,9 +119,11 @@ function display() {
 // ACTIVE ITEMS
 
 const listItems = document.querySelectorAll(".cardSelection");
+
+// ===== WORK IN PROGRESS ===
 // listItems.forEach((arrayElements, index) => {
 //   console.log(listItems[index]);
-//   listItems[index].className += ` disappear${index}`;
+//   listItems[index].className += ` card${index}`;
 // });
 
 function onClick() {
@@ -166,60 +157,3 @@ listItems.forEach((item) => {
   item.addEventListener("click", onClick);
   item.addEventListener("click", display);
 });
-
-/* ******************************************************
- // Remove item
- let span = document.createElement("span");
- let text = document.createElement("i");
- text.className = "fas fa-times-circle";
- span.className = "close";
- span.appendChild(text);
- list.forEach((item) => {
-   item.appendChild(span);
- });
- span.addEventListener("click", () => {
-   newItem.remove();
- });
- ****************************************** 
-//removed
-
-    // Add title
-    // let newTitle = document.createElement("div");
-    // newTitle.className = "titleAdd";
-    // newTitle.innerHTML = `${name}`;
-
-    // Add text
-    // let newDescription = document.createElement("div");
-    // newDescription.className = "descriptionAdd";
-    // newDescription.innerHTML = `${text}`;
-
-
-******************************************
-
-
-// const list = [...parsedData].reduce(
-//   (acc, a) =>
-//     acc + `<p class="cardDescription__text" id="${a.text}">${a.text}</p>`,
-//   ""
-// );
-// console.log(list);
-
-
-
-/* ======= Gabriela comment ========================
- // Add title
- let newTitle = document.createElement("div");
- newTitle.className = "titleAdd";
- newTitle.innerHTML = `${name}`;
- // Add text
- let newDescription = document.createElement("div");
- newDescription.className = "descriptionAdd";
- newDescription.innerHTML = `${text}`;
- // Gabriela function
- const list = [...parsedData].reduce(
-   (acc, a) =>
-     acc + `<p class="cardDescription__text" id="${a.text}">${a.text}</p>`,
-   ""
- );
- console.log(list);
-============================== */

@@ -15,7 +15,7 @@ let tarCards = [
     number: 1,
     attribute: 1,
     text:
-      "You will have to take out your diplomatic skills to address an upcoming loss. Disaster and snares of enemies are coming, but don’t give up on your self-confidence and your mental strength. Otherwise you will let the door open for physical and mental disease, as well as general disgrace and restlessness.",
+      "You will have to take out your diplomatic skills to address an upcoming loss. Disaster and snares of enemies are coming, but don't give up on your self-confidence and your mental strength. Otherwise you will let the door open for physical and mental disease, as well as general disgrace and restlessness.",
     photo: "./img/major01.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -35,7 +35,7 @@ let tarCards = [
     number: 3,
     attribute: 3,
     text:
-      "The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
+      " The days might feel long, but there is steady action and fruitfulness in them. The unknown raises in front of you but you can impose yourself towards the doubt and ignorance. You will figure out your way to find the light where there is dark, the truth where there are lies. You will be capable of unraveling complicated matters without vacillation, and give new useful readings to challenging situations.",
     photo: "./img/major03.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -55,7 +55,7 @@ let tarCards = [
     number: 5,
     attribute: 5,
     text:
-      "Marriage is in the horizon, but what looks like a dream come true can turn into a world of servitude and captivity. Don’t forget who you are and never stop looking for inspiration. A good predisposition to understand one another is crucial in life and in relationships, concord over kindness, and strength over weakness.",
+      "Marriage is in the horizon, but what looks like a dream come true can turn into a world of servitude and captivity. Don't forget who you are and never stop looking for inspiration. A good predisposition to understand one another is crucial in life and in relationships, concord over kindness, and strength over weakness.",
     photo: "./img/major05.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -93,7 +93,7 @@ let tarCards = [
     name: "The Hermit",
     attribute: 9,
     text:
-      "There are hints of treason watching and the only thing you can do is approach it with circumspection and prudence. Don’t be too cautious and resign to experience important things for this reason. Life will tell you what is good for you, everything is good in the right amount. Be transparent and avoid corruption.",
+      "There are hints of treason watching and the only thing you can do is approach it with circumspection and prudence. Don't be too cautious and resign to experience important things for this reason. Life will tell you what is good for you, everything is good in the right amount. Be transparent and avoid corruption.",
     photo: "./img/major09.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -111,7 +111,7 @@ let tarCards = [
     name: "Strength",
     attribute: 11,
     text:
-      "Your judgement is right, just trust it and it will lead you to the triumph of the deserving side in law. However, excessive judgement might lead to biased decisions and bigotry, as well as an excessive severity in your approach to life and decisions. Keep your temper and good judgement, don’t let others tell you what to think.",
+      "Your judgement is right, just trust it and it will lead you to the triumph of the deserving side in law. However, excessive judgement might lead to biased decisions and bigotry, as well as an excessive severity in your approach to life and decisions. Keep your temper and good judgement, don't let others tell you what to think.",
     photo: "./img/major11.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -120,7 +120,7 @@ let tarCards = [
     name: "The Hanged Man",
     attribute: 12,
     text:
-      "Real wisdom will only come through circumspection and sacrifice. The capacity of discernment between right and wrong decisions will be a mix of intuition and wisdom. No prophecy won’t be able to conquer a wise soul. The only trial that matters is the one inside you, never forget that you are part of the crowd and the body politic.",
+      "Real wisdom will only come through circumspection and sacrifice. The capacity of discernment between right and wrong decisions will be a mix of intuition and wisdom. No prophecy won't be able to conquer a wise soul. The only trial that matters is the one inside you, never forget that you are part of the crowd and the body politic.",
     photo: "./img/major12.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -129,7 +129,7 @@ let tarCards = [
     name: "Death",
     attribute: 13,
     text:
-      "There is possibly an end coming, most likely in a relationship or something of great interest. This will increase the feeling of self-awareness and might become sort of self-diminishment, so be careful and use this challenge as an opportunity to grow and become conscious of yourself and your decisions.",
+      "There is possible an end coming, most likely in a relationship or something of great interest. This will increase the feeling of self-awareness and might become sort of self-diminishment, so be careful and use this challenge as an opportunity to grow and become conscious of yourself and your decisions.",
     photo: "./img/major13.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -138,7 +138,7 @@ let tarCards = [
     name: "Temperance",
     attribute: 14,
     text:
-      " You are a moderated person and your economy is a consequence of it, there are signs of efficient management in your life at all levels, but beware of getting too comfortable in one single place. Beware of dogmas and too rigid structures. You should always leave some space for new believes and unexpected happenings. ",
+      "You are a moderated person and your economy is a consequence of it, there are signs of efficient management in your life at all levels, but beware of getting too comfortable in one single place. Beware of dogmas and too rigid structures. You should always leave some space for new believes and unexpected happenings.",
     photo: "./img/major14.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -165,7 +165,7 @@ let tarCards = [
     name: "The Star",
     attribute: 17,
     text:
-      " Thee will be some loss in your life, but don’t let this lead you to a personal abandonment. Keep up and take the needed care of yourself. Don’t let the feeling of impotence convince you that there is no bright path. Don’t let the arrogance dominate you and focus on the potential prospects, they are bright and awaiting for you.",
+      "Thee will be some loss in your life, but don’t let this lead you to a personal abandonment. Keep up and take the needed care of yourself. Don’t let the feeling of impotence convince you that there is no bright path. Don’t let the arrogance dominate you and focus on the potential prospects, they are bright and awaiting for you.",
     photo: "./img/major17.jpg",
     backCard: "./img/backCard.jpg",
   },
@@ -201,7 +201,7 @@ let tarCards = [
     name: "The World",
     attribute: 21,
     text:
-      "Your efforts will be recompensed. Life is a long journey and not always you will recognise this prize immediately. Important is to persevere and move on if needed. Don’t hesitate to relocate, emigrate, fly away, and look for any route that guides you through the desired path. New routes will break with inertia and the sometimes unavoidable stagnation.",
+      "You efforts will be recompensed. Life is a long journey and not always you will recognise this prize immediately. Important is to persevere and move on if needed. Don’t hesitate to relocate, emigrate, fly away, and look for any route that guides you through the desired path. New routes will break with inertia and the sometimes unavoidable stagnation.",
     photo: "./img/major21.jpg",
     backCard: "./img/backCard.jpg",
   },
