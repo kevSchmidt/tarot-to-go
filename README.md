@@ -1,14 +1,5 @@
 # Gabriela Kevin & Romain
 
-## pull master branch:
-
-- -> pull request
-- -> new pull request
-- base: 'your branch' - compare: master
-- -> create pull request
-- -> wait that i accept :)
-- in terminal: git pull origin 'your branch'
-
 ### TAROT READING APP TO GO
 
 #### SASS STRUCTURE
@@ -71,15 +62,15 @@ Task management
 
 ##### first page: intro
 
-![screenshot 1](src/img/Screenshot_app_1.png)
+![screenshot 1](/readme_img/Screenshot_app_1.png)
 
 ##### second page: card choice
 
-![screenshot 2](/src/img/Screenshot_app_1.png)
+![screenshot 2](/readme_img/Screenshot_app_1.png)
 
 ##### third page: result, card reading
 
-![screenshot 3](.src/img/Screenshot_app_1.png)
+![screenshot 3](/readme_img/Screenshot_app_1.png)
 
 #### SPECIAL FEATURES
 
@@ -100,3 +91,12 @@ function shuffle(arr) {
 we used animista for the animations
 
 (animista) [https://animista.net/]
+
+## pull master branch:
+
+- -> pull request
+- -> new pull request
+- base: 'your branch' - compare: master
+- -> create pull request
+- -> wait that i accept :)
+- in terminal: git pull origin 'your branch'
