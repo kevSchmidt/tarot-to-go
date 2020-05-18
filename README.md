@@ -75,7 +75,7 @@ Task management
 
 ##### second page: card choice
 
-![screenshot 2](src/img/Screenshot_app_1.png)
+![screenshot 2](/src/img/Screenshot_app_1.png)
 
 ##### third page: result, card reading
 
