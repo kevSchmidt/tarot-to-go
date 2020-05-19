@@ -1,9 +1,8 @@
+// IMPORT DATA
+
 import { data } from "./data.js";
 let parsedData = JSON.parse(data);
 console.log(parsedData);
-
-let arrayObj = parsedData.splice(0, 8); // select only 8 cards from the deck
-console.log(arrayObj);
 
 // SHUFFLE FUNCTION
 
@@ -13,7 +12,31 @@ function shuffle(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
 }
-shuffle(arrayObj);
+shuffle(parsedData);
+console.log(parsedData);
+
+// SELECT 8 CARDS FROM THE DECK
+
+let arrayObj = parsedData.splice(0, 8);
+console.log(arrayObj);
+
+/* ======================== WRONG  hihihihi ===========
+ let parsedData = JSON.parse(data);
+ console.log(parsedData);
+
+ let arrayObj = parsedData.splice(0, 8); // select only 8 cards from the deck
+ console.log(arrayObj);
+
+ // SHUFFLE FUNCTION
+
+ function shuffle(arr) {
+   for (let i = arr.length - 1; i > 0; i--) {
+     let j = Math.floor(Math.random() * (i + 1));
+     [arr[i], arr[j]] = [arr[j], arr[i]];
+   }
+ }
+ shuffle(arrayObj);
+ =================================== */
 
 // SECTIONS
 
@@ -51,13 +74,28 @@ circleImg.src = "./img/circle.png";
 arrayObj.forEach((obj) => {
   let { id, backCard, attribute } = obj;
   let list = document.querySelector("#cardList");
+  let index = arrayObj.indexOf(obj);
   let cardList = `
-  <div id = ${id} class= "cardSelection" name= card${attribute}>
+  <div id = ${id} class= "cardSelection card-${id}" name= card${index}>
    <img src = "${backCard}" class = "back-card"></img>
   </div>
   `;
   list.innerHTML += cardList;
+  console.log(list);
 });
+
+/* ======================= ALSO WRONG =================
+ arrayObj.forEach((obj) => {
+   let { id, backCard, attribute } = obj;
+   let list = document.querySelector("#cardList");
+   let cardList = `
+   <div id = ${id} class= "cardSelection" name= card${attribute}>
+    <img src = "${backCard}" class = "back-card"></img>
+   </div>
+   `;
+   list.innerHTML += cardList;
+ });
+ =================================================== */
 
 // DISPLAY CARDS
 
@@ -93,8 +131,7 @@ function display() {
     // Add title
     titleText += `${name} `; // send values to the empty string titleText
     // Add text
-    interText += `${text} `;
-    // send values to the empty string interText
+    interText += `${text} `; // send values to the empty string interText
   } else {
     console.log("it has been more than 3 choices"); // test purpose
   }
@@ -102,10 +139,12 @@ function display() {
   // Delay
   if (counter === 3) {
     setTimeout(function () {
+      // Card selection disappear
       cardDisplay.style.display = "none";
       results.style.display = "grid";
       cardImage.style.display = "flex";
 
+      // Card result appear
       let textNode = document.createTextNode(titleText);
       let textNode2 = document.createTextNode(interText);
       cardTitle.appendChild(textNode);
@@ -120,7 +159,7 @@ function display() {
 
 const listItems = document.querySelectorAll(".cardSelection");
 
-// ===== WORK IN PROGRESS ===
+// ===== WORK IN PROGRESS (Gabriela) ===
 // listItems.forEach((arrayElements, index) => {
 //   console.log(listItems[index]);
 //   listItems[index].className += ` card${index}`;
