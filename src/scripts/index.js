@@ -169,6 +169,7 @@ function onClick() {
   listItems.forEach(() => {
     this.classList.remove("hover");
     this.classList.add("active"); // card selected is active
+    console.log(listItems);
     this.classList.add("disappear"); // card selected disappear on click
 
     if (counter > 2) {
