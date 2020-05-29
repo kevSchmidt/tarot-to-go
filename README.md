@@ -35,14 +35,14 @@ Task management
 └───Romain-Kevin-Gabriela
 │   │
 │   └───javaScript
-|           └───import from database           |
+|           └───import from database
 |           └───generate list of cards
 |           └───when click display infos
 |
 └───Gabriela
 │   │
 │   └───more javaScript
-|           └───delay           |
+|           └───delay
 |           └───random cards
 |           └───only 3 cards
 └───Romain
@@ -91,12 +91,3 @@ function shuffle(arr) {
 we used animista for the animations
 
 (animista) [https://animista.net/]
-
-## pull master branch:
-
-- -> pull request
-- -> new pull request
-- base: 'your branch' - compare: master
-- -> create pull request
-- -> wait that i accept :)
-- in terminal: git pull origin 'your branch'
