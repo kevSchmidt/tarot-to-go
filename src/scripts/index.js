@@ -20,24 +20,6 @@ console.log(parsedData);
 let arrayObj = parsedData.splice(0, 8);
 console.log(arrayObj);
 
-/* ======================== WRONG  hihihihi ===========
- let parsedData = JSON.parse(data);
- console.log(parsedData);
-
- let arrayObj = parsedData.splice(0, 8); // select only 8 cards from the deck
- console.log(arrayObj);
-
- // SHUFFLE FUNCTION
-
- function shuffle(arr) {
-   for (let i = arr.length - 1; i > 0; i--) {
-     let j = Math.floor(Math.random() * (i + 1));
-     [arr[i], arr[j]] = [arr[j], arr[i]];
-   }
- }
- shuffle(arrayObj);
- =================================== */
-
 // SECTIONS
 
 const mainGrid = document.querySelector(".mainGrid");
@@ -83,19 +65,6 @@ arrayObj.forEach((obj) => {
   list.innerHTML += cardList;
   console.log(list);
 });
-
-/* ======================= ALSO WRONG =================
- arrayObj.forEach((obj) => {
-   let { id, backCard, attribute } = obj;
-   let list = document.querySelector("#cardList");
-   let cardList = `
-   <div id = ${id} class= "cardSelection" name= card${attribute}>
-    <img src = "${backCard}" class = "back-card"></img>
-   </div>
-   `;
-   list.innerHTML += cardList;
- });
- =================================================== */
 
 // DISPLAY CARDS
 
@@ -158,12 +127,6 @@ function display() {
 // ACTIVE ITEMS
 
 const listItems = document.querySelectorAll(".cardSelection");
-
-// ===== WORK IN PROGRESS (Gabriela) ===
-// listItems.forEach((arrayElements, index) => {
-//   console.log(listItems[index]);
-//   listItems[index].className += ` card${index}`;
-// });
 
 function onClick() {
   listItems.forEach(() => {
