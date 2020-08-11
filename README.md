@@ -1,8 +1,6 @@
-# Gabriela Kevin & Romain
+# TAROT READING APP TO GO
 
-## TAROT READING APP TO GO
-
-#### SASS STRUCTURE
+####  Structure:
 
 ```
 Project
@@ -23,8 +21,6 @@ Project
 |   └───img
 └───dist
 ```
-
-#### TASK MANAGEMENT
 
 ```
 
